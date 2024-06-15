@@ -214,15 +214,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="6.1.1" data-path="introduction-to-linear-regression.html"><a href="introduction-to-linear-regression.html#visualizing-simple-attempts"><i class="fa fa-check"></i><b>6.1.1</b> Visualizing Simple Attempts</a></li>
 <li class="chapter" data-level="6.1.2" data-path="introduction-to-linear-regression.html"><a href="introduction-to-linear-regression.html#finding-the-best-fit"><i class="fa fa-check"></i><b>6.1.2</b> Finding the Best Fit</a></li>
-<li class="chapter" data-level="6.1.3" data-path="introduction-to-linear-regression.html"><a href="introduction-to-linear-regression.html#understanding-the-model"><i class="fa fa-check"></i><b>6.1.3</b> Understanding the Model</a></li>
-<li class="chapter" data-level="6.1.4" data-path="introduction-to-linear-regression.html"><a href="introduction-to-linear-regression.html#going-a-step-further-linear-algebra"><i class="fa fa-check"></i><b>6.1.4</b> Going a Step Further: Linear Algebra</a></li>
 </ul></li>
-<li class="chapter" data-level="6.2" data-path="introduction-to-linear-regression.html"><a href="introduction-to-linear-regression.html#assumptions-of-linear-regression"><i class="fa fa-check"></i><b>6.2</b> Assumptions of Linear Regression</a></li>
-<li class="chapter" data-level="6.3" data-path="introduction-to-linear-regression.html"><a href="introduction-to-linear-regression.html#extending-linear-regression"><i class="fa fa-check"></i><b>6.3</b> Extending Linear Regression</a>
+<li class="chapter" data-level="6.2" data-path="introduction-to-linear-regression.html"><a href="introduction-to-linear-regression.html#understanding-the-interpretation"><i class="fa fa-check"></i><b>6.2</b> Understanding the Interpretation</a>
 <ul>
-<li class="chapter" data-level="6.3.1" data-path="introduction-to-linear-regression.html"><a href="introduction-to-linear-regression.html#spatial-regression"><i class="fa fa-check"></i><b>6.3.1</b> Spatial Regression</a></li>
-<li class="chapter" data-level="6.3.2" data-path="introduction-to-linear-regression.html"><a href="introduction-to-linear-regression.html#robust-estimation"><i class="fa fa-check"></i><b>6.3.2</b> Robust Estimation</a></li>
-<li class="chapter" data-level="6.3.3" data-path="introduction-to-linear-regression.html"><a href="introduction-to-linear-regression.html#robust-standard-errors"><i class="fa fa-check"></i><b>6.3.3</b> Robust Standard Errors</a></li>
+<li class="chapter" data-level="6.2.1" data-path="introduction-to-linear-regression.html"><a href="introduction-to-linear-regression.html#going-a-step-further-linear-algebra"><i class="fa fa-check"></i><b>6.2.1</b> Going a Step Further: Linear Algebra</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="introduction-to-linear-regression.html"><a href="introduction-to-linear-regression.html#assumptions-of-linear-regression"><i class="fa fa-check"></i><b>6.3</b> Assumptions of Linear Regression</a></li>
+<li class="chapter" data-level="6.4" data-path="introduction-to-linear-regression.html"><a href="introduction-to-linear-regression.html#extending-linear-regression"><i class="fa fa-check"></i><b>6.4</b> Extending Linear Regression</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="introduction-to-linear-regression.html"><a href="introduction-to-linear-regression.html#spatial-regression"><i class="fa fa-check"></i><b>6.4.1</b> Spatial Regression</a></li>
+<li class="chapter" data-level="6.4.2" data-path="introduction-to-linear-regression.html"><a href="introduction-to-linear-regression.html#robust-estimation"><i class="fa fa-check"></i><b>6.4.2</b> Robust Estimation</a></li>
+<li class="chapter" data-level="6.4.3" data-path="introduction-to-linear-regression.html"><a href="introduction-to-linear-regression.html#robust-standard-errors"><i class="fa fa-check"></i><b>6.4.3</b> Robust Standard Errors</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="diving-into-spatial-regression.html"><a href="diving-into-spatial-regression.html"><i class="fa fa-check"></i><b>7</b> Diving into Spatial Regression</a>
@@ -406,13 +408,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Here we can see that the Least Squares line goes right through the middle and on average the distance from the line, the “residuals” are about the same on top as they are on the bottom.</p>
 </div>
 </div>
-<div id="understanding-the-model" class="section level3 hasAnchor" number="6.1.3">
-<h3><span class="header-section-number">6.1.3</span> Understanding the Model<a href="introduction-to-linear-regression.html#understanding-the-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="understanding-the-interpretation" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Understanding the Interpretation<a href="introduction-to-linear-regression.html#understanding-the-interpretation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The regression equation can be written as:
 <span class="math display">\[ y = \alpha + \beta \times x + error\]</span>
 where <span class="math inline">\(\hat{\alpha}\)</span> and <span class="math inline">\(\hat{\beta}\)</span> are estimates of the intercept and slope, determined by the least squares method.</p>
 <p>So all you have to do to understand the relationship x has to y is to plug in the numbers you get from the model!</p>
-<p>So if <span class="math display">\[\beta\]</span> = 2. That means a 1 unit increase in <span class="math display">\[ x = 1\]</span> results in a <span class="math display">\[2 \times x\]</span> increase in y! It is that easy.</p>
+<p>So if <span class="math inline">\(\beta = 2\)</span>. That means a 1 unit increase in <span class="math inline">\(x = 1\)</span> results in a <span class="math inline">\(2 \times x\)</span> increase in y! It is that easy.</p>
 <p>Want to know what y is on average controlling for your variables?</p>
 <p>Let’s take the <code>mtcars</code> dataset, which contains the variables: <code>mpg</code>, <code>Weight (1000 lbs)</code>, <code>Displacement (cu.in.)</code>, <code>Horsepower</code>, and <code>Number of cylinders</code>. We want to know if we can predict <code>mpg</code> based on these factors.</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="introduction-to-linear-regression.html#cb17-1" tabindex="-1"></a><span class="co"># Load the dataset</span></span>
@@ -467,15 +470,14 @@ Which means all you have to do is plug the numbers for the Xs.</p>
 <p><span class="math display">\[
 \operatorname{\widehat{mpg}} = 40.83 - 3.85(\operatorname{4}) + 0.01(\operatorname{150}) - 0.02(\operatorname{145}) - 1.29(\operatorname{4})
 \]</span>
-which equals 18.87 mpg. That seems reasonable for a car a few ago.</p>
-</div>
-<div id="going-a-step-further-linear-algebra" class="section level3 hasAnchor" number="6.1.4">
-<h3><span class="header-section-number">6.1.4</span> Going a Step Further: Linear Algebra<a href="introduction-to-linear-regression.html#going-a-step-further-linear-algebra" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+which equals 18.87 mpg! That seems reasonable for a car a few ago (when the cars in this dataset are from).</p>
+<div id="going-a-step-further-linear-algebra" class="section level3 hasAnchor" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> Going a Step Further: Linear Algebra<a href="introduction-to-linear-regression.html#going-a-step-further-linear-algebra" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>For those interested in the mathematical details, the coefficients <span class="math inline">\(\beta\)</span> can also be estimated using linear algebra. This is expressed as:
 <span class="math display">\[ \beta = (X^TX)^{-1}X^TY \]</span>
 where <span class="math inline">\(X\)</span> is the matrix of input values, and <span class="math inline">\(Y\)</span> is the vector of output values. This formula provides the least squares estimates of the coefficients.</p>
-<div id="load-and-prepare-data" class="section level4 hasAnchor" number="6.1.4.1">
-<h4><span class="header-section-number">6.1.4.1</span> Load and Prepare Data<a href="introduction-to-linear-regression.html#load-and-prepare-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="load-and-prepare-data" class="section level4 hasAnchor" number="6.2.1.1">
+<h4><span class="header-section-number">6.2.1.1</span> Load and Prepare Data<a href="introduction-to-linear-regression.html#load-and-prepare-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>First, let’s load the data and prepare the matrices.</p>
 <div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="introduction-to-linear-regression.html#cb21-1" tabindex="-1"></a><span class="co"># Prepare the data matrix X (with intercept) and response vector Y</span></span>
 <span id="cb21-2"><a href="introduction-to-linear-regression.html#cb21-2" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(<span class="fu">cbind</span>(<span class="at">Intercept =</span> <span class="dv">1</span>, <span class="st">`</span><span class="at">Weight (1000 lbs)</span><span class="st">`</span> <span class="ot">=</span> mtcars<span class="sc">$</span>wt, <span class="st">`</span><span class="at">Displacement (cu.in.)</span><span class="st">`</span> <span class="ot">=</span> mtcars<span class="sc">$</span>disp, <span class="st">`</span><span class="at">Horsepower</span><span class="st">`</span> <span class="ot">=</span> mtcars<span class="sc">$</span>hp, <span class="st">`</span><span class="at">Number of cylinders</span><span class="st">`</span> <span class="ot">=</span> mtcars<span class="sc">$</span>cyl))  <span class="co"># Adding an intercept</span></span>
@@ -500,8 +502,8 @@ where <span class="math inline">\(X\)</span> is the matrix of input values, and 
 <div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="introduction-to-linear-regression.html#cb23-1" tabindex="-1"></a><span class="fu">head</span>(Y)</span></code></pre></div>
 <pre><code>## [1] 21.0 21.0 22.8 21.4 18.7 18.1</code></pre>
 </div>
-<div id="apply-the-linear-algebra-formula-for-beta" class="section level4 hasAnchor" number="6.1.4.2">
-<h4><span class="header-section-number">6.1.4.2</span> Apply the Linear Algebra Formula for Beta<a href="introduction-to-linear-regression.html#apply-the-linear-algebra-formula-for-beta" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="apply-the-linear-algebra-formula-for-beta" class="section level4 hasAnchor" number="6.2.1.2">
+<h4><span class="header-section-number">6.2.1.2</span> Apply the Linear Algebra Formula for Beta<a href="introduction-to-linear-regression.html#apply-the-linear-algebra-formula-for-beta" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Now, we apply the linear algebra formula to compute the coefficients. The formula <span class="math inline">\(\beta = (X^TX)^{-1}X^TY\)</span> will give us the estimates for the intercept and the coefficient for <code>mpg</code>.</p>
 <div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="introduction-to-linear-regression.html#cb25-1" tabindex="-1"></a><span class="co"># Compute (X&#39;X)^(-1)</span></span>
 <span id="cb25-2"><a href="introduction-to-linear-regression.html#cb25-2" tabindex="-1"></a>XTX_inv <span class="ot">&lt;-</span> <span class="fu">solve</span>(<span class="fu">t</span>(X) <span class="sc">%*%</span> X)</span>
@@ -522,8 +524,8 @@ where <span class="math inline">\(X\)</span> is the matrix of input values, and 
 </div>
 </div>
 </div>
-<div id="assumptions-of-linear-regression" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> Assumptions of Linear Regression<a href="introduction-to-linear-regression.html#assumptions-of-linear-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="assumptions-of-linear-regression" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Assumptions of Linear Regression<a href="introduction-to-linear-regression.html#assumptions-of-linear-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To effectively use linear regression, it’s essential to understand its underlying assumptions. If these assumptions are violated, the results might not be reliable. Here are the key assumptions:</p>
 <ol style="list-style-type: decimal">
 <li><strong>Linearity:</strong> The relationship between the predictors and the dependent variable is linear.</li>
@@ -533,19 +535,19 @@ where <span class="math inline">\(X\)</span> is the matrix of input values, and 
 </ol>
 <p>Addressing these assumptions ensures the validity of the regression results. When these assumptions are not met, modifications and more advanced techniques might be necessary.</p>
 </div>
-<div id="extending-linear-regression" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> Extending Linear Regression<a href="introduction-to-linear-regression.html#extending-linear-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="extending-linear-regression" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Extending Linear Regression<a href="introduction-to-linear-regression.html#extending-linear-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>As powerful as linear regression is, it sometimes needs to be adjusted or extended to handle more complex data characteristics. Here are a few notable extensions:</p>
-<div id="spatial-regression" class="section level3 hasAnchor" number="6.3.1">
-<h3><span class="header-section-number">6.3.1</span> Spatial Regression<a href="introduction-to-linear-regression.html#spatial-regression" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="spatial-regression" class="section level3 hasAnchor" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> Spatial Regression<a href="introduction-to-linear-regression.html#spatial-regression" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>When dealing with geographical or spatial data, traditional regression might not suffice because observations in close proximity might be correlated, violating the independence assumption. Spatial regression models account for this correlation, offering more precise insights for geographical data analysis.</p>
 </div>
-<div id="robust-estimation" class="section level3 hasAnchor" number="6.3.2">
-<h3><span class="header-section-number">6.3.2</span> Robust Estimation<a href="introduction-to-linear-regression.html#robust-estimation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="robust-estimation" class="section level3 hasAnchor" number="6.4.2">
+<h3><span class="header-section-number">6.4.2</span> Robust Estimation<a href="introduction-to-linear-regression.html#robust-estimation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Robust estimators are a broad class of estimators that generalize the method of least squares. They are particularly useful when dealing with outliers or heavy-tailed distributions, as they provide robustness against violations of the normality assumption.</p>
 </div>
-<div id="robust-standard-errors" class="section level3 hasAnchor" number="6.3.3">
-<h3><span class="header-section-number">6.3.3</span> Robust Standard Errors<a href="introduction-to-linear-regression.html#robust-standard-errors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="robust-standard-errors" class="section level3 hasAnchor" number="6.4.3">
+<h3><span class="header-section-number">6.4.3</span> Robust Standard Errors<a href="introduction-to-linear-regression.html#robust-standard-errors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Robust standard errors are an adjustment to standard errors in regression analysis that provide a safeguard against violations of both the homoscedasticity and independence assumptions. They are essential for drawing reliable inference when these assumptions are challenged.</p>
 
 </div>

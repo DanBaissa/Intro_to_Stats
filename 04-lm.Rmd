@@ -74,7 +74,7 @@ legend("bottomright", legend=c("Residuals"), col=c("black"), lty=1, cex=0.8)
 
 Here we can see that the Least Squares line goes right through the middle and on average the distance from the line, the "residuals" are about the same on top as they are on the bottom.
 
-### Understanding the Model
+## Understanding the Interpretation
 
 The regression equation can be written as:
 \[ y = \alpha + \beta \times x + error\]
@@ -82,7 +82,7 @@ where \( \hat{\alpha} \) and \( \hat{\beta} \) are estimates of the intercept an
 
 So all you have to do to understand the relationship x has to y is to plug in the numbers you get from the model!
 
-So if \[\beta\] = 2. That means a 1 unit increase in \[ x = 1\] results in a \[2 \times x\] increase in y! It is that easy. 
+So if \(\beta = 2 \). That means a 1 unit increase in \( x = 1\) results in a \(2 \times x\) increase in y! It is that easy. 
 
 Want to know what y is on average controlling for your variables?
 
@@ -126,7 +126,7 @@ Let's say we want to know the average mpg of a car that weights 4,000 lbs, has 1
 $$
 \operatorname{\widehat{mpg}} = 40.83 - 3.85(\operatorname{4}) + 0.01(\operatorname{150}) - 0.02(\operatorname{145}) - 1.29(\operatorname{4})
 $$
-which equals `r 40.83 - (3.85*4)+(.01*150)-(.02*145)-(1.29*4)` mpg. That seems reasonable for a car a few ago.
+which equals `r 40.83 - (3.85*4)+(.01*150)-(.02*145)-(1.29*4)` mpg! That seems reasonable for a car a few ago (when the cars in this dataset are from).
 
 
 

@@ -49,7 +49,7 @@ the-concept
 visualizing-simple-attempts
 finding-the-best-fit
 introducing-least-squares
-understanding-the-model
+understanding-the-interpretation
 going-a-step-further-linear-algebra
 load-and-prepare-data
 apply-the-linear-algebra-formula-for-beta
