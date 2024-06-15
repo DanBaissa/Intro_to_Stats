@@ -58,6 +58,7 @@ extending-linear-regression
 spatial-regression
 robust-estimation
 robust-standard-errors
+handling-serial-autocorrelation-in-time-series-data
 diving-into-spatial-regression
 why-not-just-use-ordinary-regression
 introducing-spatial-regression

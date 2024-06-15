@@ -225,6 +225,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.4.1" data-path="introduction-to-linear-regression.html"><a href="introduction-to-linear-regression.html#spatial-regression"><i class="fa fa-check"></i><b>6.4.1</b> Spatial Regression</a></li>
 <li class="chapter" data-level="6.4.2" data-path="introduction-to-linear-regression.html"><a href="introduction-to-linear-regression.html#robust-estimation"><i class="fa fa-check"></i><b>6.4.2</b> Robust Estimation</a></li>
 <li class="chapter" data-level="6.4.3" data-path="introduction-to-linear-regression.html"><a href="introduction-to-linear-regression.html#robust-standard-errors"><i class="fa fa-check"></i><b>6.4.3</b> Robust Standard Errors</a></li>
+<li class="chapter" data-level="6.4.4" data-path="introduction-to-linear-regression.html"><a href="introduction-to-linear-regression.html#handling-serial-autocorrelation-in-time-series-data"><i class="fa fa-check"></i><b>6.4.4</b> Handling Serial Autocorrelation in Time Series Data</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="diving-into-spatial-regression.html"><a href="diving-into-spatial-regression.html"><i class="fa fa-check"></i><b>7</b> Diving into Spatial Regression</a>
@@ -549,6 +550,11 @@ where <span class="math inline">\(X\)</span> is the matrix of input values, and 
 <div id="robust-standard-errors" class="section level3 hasAnchor" number="6.4.3">
 <h3><span class="header-section-number">6.4.3</span> Robust Standard Errors<a href="introduction-to-linear-regression.html#robust-standard-errors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Robust standard errors are an adjustment to standard errors in regression analysis that provide a safeguard against violations of both the homoscedasticity and independence assumptions. They are essential for drawing reliable inference when these assumptions are challenged.</p>
+</div>
+<div id="handling-serial-autocorrelation-in-time-series-data" class="section level3 hasAnchor" number="6.4.4">
+<h3><span class="header-section-number">6.4.4</span> Handling Serial Autocorrelation in Time Series Data<a href="introduction-to-linear-regression.html#handling-serial-autocorrelation-in-time-series-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>When dealing with time series data, one common challenge is serial autocorrelation—where residuals at one point in time are correlated with residuals at a previous time. This correlation can invalidate standard regression inferences because it breaches the assumption that the error terms are independent. To address this, methods like ARIMA models or adjustments such as Newey-West standard errors can be used to correct for the autocorrelation, ensuring the integrity of the regression analysis.</p>
+<p>By incorporating these extensions into your analytical toolkit, you can tackle a broader range of data characteristics and draw more reliable conclusions from your statistical models.</p>
 
 </div>
 </div>
