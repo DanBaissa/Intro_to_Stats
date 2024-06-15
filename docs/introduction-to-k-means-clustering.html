@@ -23,7 +23,7 @@
 <meta name="author" content="Daniel K Baissa" />
 
 
-<meta name="date" content="2024-06-14" />
+<meta name="date" content="2024-06-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -365,23 +365,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="practical-example-k-means-on-the-iris-dataset" class="section level2 hasAnchor" number="11.2">
 <h2><span class="header-section-number">11.2</span> Practical Example: K-Means on the Iris Dataset<a href="introduction-to-k-means-clustering.html#practical-example-k-means-on-the-iris-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Let’s put theory into practice with the Iris dataset, where we’ll attempt to cluster the flowers based solely on their petal and sepal measurements.</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="introduction-to-k-means-clustering.html#cb36-1" tabindex="-1"></a><span class="co"># Load necessary libraries</span></span>
-<span id="cb36-2"><a href="introduction-to-k-means-clustering.html#cb36-2" tabindex="-1"></a><span class="fu">library</span>(stats)</span>
-<span id="cb36-3"><a href="introduction-to-k-means-clustering.html#cb36-3" tabindex="-1"></a></span>
-<span id="cb36-4"><a href="introduction-to-k-means-clustering.html#cb36-4" tabindex="-1"></a><span class="co"># Load the iris dataset</span></span>
-<span id="cb36-5"><a href="introduction-to-k-means-clustering.html#cb36-5" tabindex="-1"></a><span class="fu">data</span>(iris)</span>
-<span id="cb36-6"><a href="introduction-to-k-means-clustering.html#cb36-6" tabindex="-1"></a></span>
-<span id="cb36-7"><a href="introduction-to-k-means-clustering.html#cb36-7" tabindex="-1"></a><span class="co"># Use only the petal and sepal measurements</span></span>
-<span id="cb36-8"><a href="introduction-to-k-means-clustering.html#cb36-8" tabindex="-1"></a>iris_data <span class="ot">&lt;-</span> iris[, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>]</span>
-<span id="cb36-9"><a href="introduction-to-k-means-clustering.html#cb36-9" tabindex="-1"></a></span>
-<span id="cb36-10"><a href="introduction-to-k-means-clustering.html#cb36-10" tabindex="-1"></a><span class="co"># Set a seed for reproducibility</span></span>
-<span id="cb36-11"><a href="introduction-to-k-means-clustering.html#cb36-11" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb36-12"><a href="introduction-to-k-means-clustering.html#cb36-12" tabindex="-1"></a></span>
-<span id="cb36-13"><a href="introduction-to-k-means-clustering.html#cb36-13" tabindex="-1"></a><span class="co"># Perform k-means clustering with 3 clusters (as we expect 3 species)</span></span>
-<span id="cb36-14"><a href="introduction-to-k-means-clustering.html#cb36-14" tabindex="-1"></a>km_result <span class="ot">&lt;-</span> <span class="fu">kmeans</span>(iris_data, <span class="at">centers =</span> <span class="dv">3</span>, <span class="at">nstart =</span> <span class="dv">25</span>)</span>
-<span id="cb36-15"><a href="introduction-to-k-means-clustering.html#cb36-15" tabindex="-1"></a></span>
-<span id="cb36-16"><a href="introduction-to-k-means-clustering.html#cb36-16" tabindex="-1"></a><span class="co"># View the results</span></span>
-<span id="cb36-17"><a href="introduction-to-k-means-clustering.html#cb36-17" tabindex="-1"></a><span class="fu">print</span>(km_result<span class="sc">$</span>centers)</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="introduction-to-k-means-clustering.html#cb38-1" tabindex="-1"></a><span class="co"># Load necessary libraries</span></span>
+<span id="cb38-2"><a href="introduction-to-k-means-clustering.html#cb38-2" tabindex="-1"></a><span class="fu">library</span>(stats)</span>
+<span id="cb38-3"><a href="introduction-to-k-means-clustering.html#cb38-3" tabindex="-1"></a></span>
+<span id="cb38-4"><a href="introduction-to-k-means-clustering.html#cb38-4" tabindex="-1"></a><span class="co"># Load the iris dataset</span></span>
+<span id="cb38-5"><a href="introduction-to-k-means-clustering.html#cb38-5" tabindex="-1"></a><span class="fu">data</span>(iris)</span>
+<span id="cb38-6"><a href="introduction-to-k-means-clustering.html#cb38-6" tabindex="-1"></a></span>
+<span id="cb38-7"><a href="introduction-to-k-means-clustering.html#cb38-7" tabindex="-1"></a><span class="co"># Use only the petal and sepal measurements</span></span>
+<span id="cb38-8"><a href="introduction-to-k-means-clustering.html#cb38-8" tabindex="-1"></a>iris_data <span class="ot">&lt;-</span> iris[, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>]</span>
+<span id="cb38-9"><a href="introduction-to-k-means-clustering.html#cb38-9" tabindex="-1"></a></span>
+<span id="cb38-10"><a href="introduction-to-k-means-clustering.html#cb38-10" tabindex="-1"></a><span class="co"># Set a seed for reproducibility</span></span>
+<span id="cb38-11"><a href="introduction-to-k-means-clustering.html#cb38-11" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb38-12"><a href="introduction-to-k-means-clustering.html#cb38-12" tabindex="-1"></a></span>
+<span id="cb38-13"><a href="introduction-to-k-means-clustering.html#cb38-13" tabindex="-1"></a><span class="co"># Perform k-means clustering with 3 clusters (as we expect 3 species)</span></span>
+<span id="cb38-14"><a href="introduction-to-k-means-clustering.html#cb38-14" tabindex="-1"></a>km_result <span class="ot">&lt;-</span> <span class="fu">kmeans</span>(iris_data, <span class="at">centers =</span> <span class="dv">3</span>, <span class="at">nstart =</span> <span class="dv">25</span>)</span>
+<span id="cb38-15"><a href="introduction-to-k-means-clustering.html#cb38-15" tabindex="-1"></a></span>
+<span id="cb38-16"><a href="introduction-to-k-means-clustering.html#cb38-16" tabindex="-1"></a><span class="co"># View the results</span></span>
+<span id="cb38-17"><a href="introduction-to-k-means-clustering.html#cb38-17" tabindex="-1"></a><span class="fu">print</span>(km_result<span class="sc">$</span>centers)</span></code></pre></div>
 <pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width
 ## 1     5.006000    3.428000     1.462000    0.246000
 ## 2     5.901613    2.748387     4.393548    1.433871
@@ -389,19 +389,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="visualizing-k-means-clustering" class="section level3 hasAnchor" number="11.2.1">
 <h3><span class="header-section-number">11.2.1</span> Visualizing K-Means Clustering<a href="introduction-to-k-means-clustering.html#visualizing-k-means-clustering" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To see our clustering in action, let’s plot the clusters along with the centroids:</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="introduction-to-k-means-clustering.html#cb38-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb38-2"><a href="introduction-to-k-means-clustering.html#cb38-2" tabindex="-1"></a></span>
-<span id="cb38-3"><a href="introduction-to-k-means-clustering.html#cb38-3" tabindex="-1"></a><span class="co"># Create a data frame with the cluster assignments</span></span>
-<span id="cb38-4"><a href="introduction-to-k-means-clustering.html#cb38-4" tabindex="-1"></a>iris_clusters <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(iris_data, <span class="at">Cluster =</span> <span class="fu">factor</span>(km_result<span class="sc">$</span>cluster))</span>
-<span id="cb38-5"><a href="introduction-to-k-means-clustering.html#cb38-5" tabindex="-1"></a></span>
-<span id="cb38-6"><a href="introduction-to-k-means-clustering.html#cb38-6" tabindex="-1"></a><span class="co"># Plotting</span></span>
-<span id="cb38-7"><a href="introduction-to-k-means-clustering.html#cb38-7" tabindex="-1"></a><span class="fu">ggplot</span>(iris_clusters, <span class="fu">aes</span>(Petal.Length, Petal.Width, <span class="at">color =</span> Cluster)) <span class="sc">+</span></span>
-<span id="cb38-8"><a href="introduction-to-k-means-clustering.html#cb38-8" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span> </span>
-<span id="cb38-9"><a href="introduction-to-k-means-clustering.html#cb38-9" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> <span class="fu">data.frame</span>(km_result<span class="sc">$</span>centers), <span class="fu">aes</span>(<span class="at">x =</span> Petal.Length, <span class="at">y =</span> Petal.Width), </span>
-<span id="cb38-10"><a href="introduction-to-k-means-clustering.html#cb38-10" tabindex="-1"></a>             <span class="at">colour =</span> <span class="st">&#39;red&#39;</span>, <span class="at">size =</span> <span class="dv">5</span>, <span class="at">shape =</span> <span class="dv">17</span>) <span class="sc">+</span></span>
-<span id="cb38-11"><a href="introduction-to-k-means-clustering.html#cb38-11" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;K-Means Clustering of the Iris Dataset&quot;</span>) <span class="sc">+</span></span>
-<span id="cb38-12"><a href="introduction-to-k-means-clustering.html#cb38-12" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="introduction-to-k-means-clustering.html#cb40-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb40-2"><a href="introduction-to-k-means-clustering.html#cb40-2" tabindex="-1"></a></span>
+<span id="cb40-3"><a href="introduction-to-k-means-clustering.html#cb40-3" tabindex="-1"></a><span class="co"># Create a data frame with the cluster assignments</span></span>
+<span id="cb40-4"><a href="introduction-to-k-means-clustering.html#cb40-4" tabindex="-1"></a>iris_clusters <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(iris_data, <span class="at">Cluster =</span> <span class="fu">factor</span>(km_result<span class="sc">$</span>cluster))</span>
+<span id="cb40-5"><a href="introduction-to-k-means-clustering.html#cb40-5" tabindex="-1"></a></span>
+<span id="cb40-6"><a href="introduction-to-k-means-clustering.html#cb40-6" tabindex="-1"></a><span class="co"># Plotting</span></span>
+<span id="cb40-7"><a href="introduction-to-k-means-clustering.html#cb40-7" tabindex="-1"></a><span class="fu">ggplot</span>(iris_clusters, <span class="fu">aes</span>(Petal.Length, Petal.Width, <span class="at">color =</span> Cluster)) <span class="sc">+</span></span>
+<span id="cb40-8"><a href="introduction-to-k-means-clustering.html#cb40-8" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span> </span>
+<span id="cb40-9"><a href="introduction-to-k-means-clustering.html#cb40-9" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> <span class="fu">data.frame</span>(km_result<span class="sc">$</span>centers), <span class="fu">aes</span>(<span class="at">x =</span> Petal.Length, <span class="at">y =</span> Petal.Width), </span>
+<span id="cb40-10"><a href="introduction-to-k-means-clustering.html#cb40-10" tabindex="-1"></a>             <span class="at">colour =</span> <span class="st">&#39;red&#39;</span>, <span class="at">size =</span> <span class="dv">5</span>, <span class="at">shape =</span> <span class="dv">17</span>) <span class="sc">+</span></span>
+<span id="cb40-11"><a href="introduction-to-k-means-clustering.html#cb40-11" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;K-Means Clustering of the Iris Dataset&quot;</span>) <span class="sc">+</span></span>
+<span id="cb40-12"><a href="introduction-to-k-means-clustering.html#cb40-12" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
 <p>This plot will shows how the algorithm groups the flowers into clusters, with red points marking the centroids. Each cluster corresponds to groups of flowers that share similar petal and sepal dimensions. Based on these two dimentions we can see that these flowers are nicely clustered!</p>
 </div>
 </div>

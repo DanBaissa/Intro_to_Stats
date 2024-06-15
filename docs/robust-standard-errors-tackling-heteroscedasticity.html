@@ -23,7 +23,7 @@
 <meta name="author" content="Daniel K Baissa" />
 
 
-<meta name="date" content="2024-06-14" />
+<meta name="date" content="2024-06-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -350,30 +350,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="visualizing-heteroscedasticity" class="section level2 hasAnchor" number="9.1">
 <h2><span class="header-section-number">9.1</span> Visualizing Heteroscedasticity<a href="robust-standard-errors-tackling-heteroscedasticity.html#visualizing-heteroscedasticity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>First, let’s visualize what heteroscedasticity looks like and then see how it affects the results of Ordinary Least Squares (OLS) regression.</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb27-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
-<span id="cb27-2"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb27-2" tabindex="-1"></a><span class="co"># Generate heteroscedastic data</span></span>
-<span id="cb27-3"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb27-3" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span></span>
-<span id="cb27-4"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb27-4" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fl">1.5</span> <span class="sc">*</span> x <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">sd =</span> .<span class="dv">5</span> <span class="sc">*</span> x)  <span class="co"># Increasing variance</span></span>
-<span id="cb27-5"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb27-5" tabindex="-1"></a></span>
-<span id="cb27-6"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb27-6" tabindex="-1"></a><span class="co"># Fit OLS model</span></span>
-<span id="cb27-7"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb27-7" tabindex="-1"></a>ols_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x)</span>
-<span id="cb27-8"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb27-8" tabindex="-1"></a></span>
-<span id="cb27-9"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb27-9" tabindex="-1"></a><span class="co"># Plot the data and OLS fit</span></span>
-<span id="cb27-10"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb27-10" tabindex="-1"></a><span class="fu">plot</span>(x, y, <span class="at">main =</span> <span class="st">&quot;Illustration of Heteroscedasticity&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Predictor (x)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Response (y)&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>)</span>
-<span id="cb27-11"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb27-11" tabindex="-1"></a><span class="fu">abline</span>(ols_model, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb29-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb29-2"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb29-2" tabindex="-1"></a><span class="co"># Generate heteroscedastic data</span></span>
+<span id="cb29-3"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb29-3" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span></span>
+<span id="cb29-4"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb29-4" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fl">1.5</span> <span class="sc">*</span> x <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">sd =</span> .<span class="dv">5</span> <span class="sc">*</span> x)  <span class="co"># Increasing variance</span></span>
+<span id="cb29-5"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb29-5" tabindex="-1"></a></span>
+<span id="cb29-6"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb29-6" tabindex="-1"></a><span class="co"># Fit OLS model</span></span>
+<span id="cb29-7"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb29-7" tabindex="-1"></a>ols_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x)</span>
+<span id="cb29-8"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb29-8" tabindex="-1"></a></span>
+<span id="cb29-9"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb29-9" tabindex="-1"></a><span class="co"># Plot the data and OLS fit</span></span>
+<span id="cb29-10"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb29-10" tabindex="-1"></a><span class="fu">plot</span>(x, y, <span class="at">main =</span> <span class="st">&quot;Illustration of Heteroscedasticity&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Predictor (x)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Response (y)&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>)</span>
+<span id="cb29-11"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb29-11" tabindex="-1"></a><span class="fu">abline</span>(ols_model, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
 <p>The plot will display a trumpet-shaped pattern of variance increasing with the predictor, which is a classic indication of heteroscedasticity.</p>
 </div>
 <div id="addressing-heteroscedasticity-with-robust-standard-errors" class="section level2 hasAnchor" number="9.2">
 <h2><span class="header-section-number">9.2</span> Addressing Heteroscedasticity with Robust Standard Errors<a href="robust-standard-errors-tackling-heteroscedasticity.html#addressing-heteroscedasticity-with-robust-standard-errors" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Robust standard errors provide a way to correct the standard errors of your model coefficients in the presence of heteroscedasticity, allowing for more reliable statistical inference.</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb28-1" tabindex="-1"></a><span class="fu">library</span>(sandwich)</span>
-<span id="cb28-2"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb28-2" tabindex="-1"></a><span class="fu">library</span>(lmtest)</span>
-<span id="cb28-3"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb28-3" tabindex="-1"></a></span>
-<span id="cb28-4"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb28-4" tabindex="-1"></a><span class="co"># Calculate robust standard errors</span></span>
-<span id="cb28-5"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb28-5" tabindex="-1"></a>robust_se <span class="ot">&lt;-</span> <span class="fu">coeftest</span>(ols_model, <span class="at">vcov =</span> <span class="fu">vcovHC</span>(ols_model, <span class="at">type =</span> <span class="st">&quot;HC1&quot;</span>))</span>
-<span id="cb28-6"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb28-6" tabindex="-1"></a></span>
-<span id="cb28-7"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb28-7" tabindex="-1"></a>robust_se</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb30-1" tabindex="-1"></a><span class="fu">library</span>(sandwich)</span>
+<span id="cb30-2"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb30-2" tabindex="-1"></a><span class="fu">library</span>(lmtest)</span>
+<span id="cb30-3"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb30-3" tabindex="-1"></a></span>
+<span id="cb30-4"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb30-4" tabindex="-1"></a><span class="co"># Calculate robust standard errors</span></span>
+<span id="cb30-5"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb30-5" tabindex="-1"></a>robust_se <span class="ot">&lt;-</span> <span class="fu">coeftest</span>(ols_model, <span class="at">vcov =</span> <span class="fu">vcovHC</span>(ols_model, <span class="at">type =</span> <span class="st">&quot;HC1&quot;</span>))</span>
+<span id="cb30-6"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb30-6" tabindex="-1"></a></span>
+<span id="cb30-7"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb30-7" tabindex="-1"></a>robust_se</span></code></pre></div>
 <pre><code>## 
 ## t test of coefficients:
 ## 
@@ -447,8 +447,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="implementing-in-r-1" class="section level2 hasAnchor" number="9.4">
 <h2><span class="header-section-number">9.4</span> Implementing in R<a href="robust-standard-errors-tackling-heteroscedasticity.html#implementing-in-r-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>As shown earlier, the <code>sandwich</code> and <code>lmtest</code> packages in R make these calculations straightforward, allowing you to focus on interpretation rather than computation:</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb30-1" tabindex="-1"></a><span class="co"># Calculate robust standard errors (HC1)</span></span>
-<span id="cb30-2"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb30-2" tabindex="-1"></a>robust_se <span class="ot">&lt;-</span> <span class="fu">coeftest</span>(ols_model, <span class="at">vcov =</span> <span class="fu">vcovHC</span>(ols_model, <span class="at">type =</span> <span class="st">&quot;HC1&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb32-1" tabindex="-1"></a><span class="co"># Calculate robust standard errors (HC1)</span></span>
+<span id="cb32-2"><a href="robust-standard-errors-tackling-heteroscedasticity.html#cb32-2" tabindex="-1"></a>robust_se <span class="ot">&lt;-</span> <span class="fu">coeftest</span>(ols_model, <span class="at">vcov =</span> <span class="fu">vcovHC</span>(ols_model, <span class="at">type =</span> <span class="st">&quot;HC1&quot;</span>))</span></code></pre></div>
 <p>This implementation directly computes the robust standard errors using the HC1 estimator, providing you with adjusted standard errors that account for heteroscedasticity.</p>
 <div id="ending-thoughts" class="section level3 hasAnchor" number="9.4.1">
 <h3><span class="header-section-number">9.4.1</span> Ending Thoughts<a href="robust-standard-errors-tackling-heteroscedasticity.html#ending-thoughts" class="anchor-section" aria-label="Anchor link to header"></a></h3>

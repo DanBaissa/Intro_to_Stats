@@ -80,21 +80,69 @@ The regression equation can be written as:
 \[ y = \alpha + \beta \times x + error\]
 where \( \hat{\alpha} \) and \( \hat{\beta} \) are estimates of the intercept and slope, determined by the least squares method.
 
+So all you have to do to understand the relationship x has to y is to plug in the numbers you get from the model!
+
+So if \[\beta\] = 2. That means a 1 unit increase in \[ x = 1\] results in a \[2 \times x\] increase in y! It is that easy. 
+
+Want to know what y is on average controlling for your variables?
+
+Let’s take the `mtcars` dataset, which contains the variables: `mpg`, `Weight (1000 lbs)`, `Displacement (cu.in.)`, `Horsepower`, and `Number of cylinders`. We want to know if we can predict `mpg` based on these factors. 
+
+
+```{r}
+# Load the dataset
+data(mtcars)
+
+head(mtcars)
+```
+
+There you go! Its just like an excel spreadsheet if you never encountered a dataset in R before.
+
+```{r}
+# Load the dataset
+data(mtcars)
+
+cars <- lm(mpg ~ wt + disp + hp + cyl, data = mtcars)
+summary(cars)
+```
+
+Here are the results of the model! the Summary function provides a lot of information. For our estimates, we want the Estimate column. The remaining columns are for measuring if the effect is significant or not. The information at the bottom tells us goodness of our fit.
+
+Let's go back top that Estimate column. These are our \[\beta\]s. So we have this formula
+
+
+$$
+\operatorname{mpg} = \alpha + \beta_{1}(\operatorname{wt}) + \beta_{2}(\operatorname{disp}) + \beta_{3}(\operatorname{hp}) + \beta_{4}(\operatorname{cyl}) + \epsilon
+$$
+When you plug in the betas you get:
+
+$$
+\operatorname{\widehat{mpg}} = 40.83 - 3.85(\operatorname{wt}) + 0.01(\operatorname{disp}) - 0.02(\operatorname{hp}) - 1.29(\operatorname{cyl})
+$$
+Which means all you have to do is plug the numbers for the Xs. 
+
+Let's say we want to know the average mpg of a car that weights 4,000 lbs, has 145 Horse Power, 150 cubic inch displacement engine, and 4 cylinders. 
+
+$$
+\operatorname{\widehat{mpg}} = 40.83 - 3.85(\operatorname{4}) + 0.01(\operatorname{150}) - 0.02(\operatorname{145}) - 1.29(\operatorname{4})
+$$
+which equals `r 40.83 - (3.85*4)+(.01*150)-(.02*145)-(1.29*4)` mpg. That seems reasonable for a car a few ago.
+
+
+
 ### Going a Step Further: Linear Algebra
 
 For those interested in the mathematical details, the coefficients \( \beta \) can also be estimated using linear algebra. This is expressed as:
 \[ \beta = (X^TX)^{-1}X^TY \]
 where \( X \) is the matrix of input values, and \( Y \) is the vector of output values. This formula provides the least squares estimates of the coefficients.
 
-Let’s take the `cars` dataset, which contains two variables: `speed` (the speed of cars) and `dist` (the distance required to stop). We'll predict `dist` based on `speed` using linear algebra.
 
 #### Load and Prepare Data
 
 First, let’s load the data and prepare the matrices.
 
 ```{r}
-# Load the dataset
-data(mtcars)
+
 
 # Prepare the data matrix X (with intercept) and response vector Y
 X <- as.matrix(cbind(Intercept = 1, `Weight (1000 lbs)` = mtcars$wt, `Displacement (cu.in.)` = mtcars$disp, `Horsepower` = mtcars$hp, `Number of cylinders` = mtcars$cyl))  # Adding an intercept
@@ -107,7 +155,7 @@ head(Y)
 
 #### Apply the Linear Algebra Formula for Beta
 
-Now, we apply the linear algebra formula to compute the coefficients. The formula \( \beta = (X^TX)^{-1}X^TY \) will give us the estimates for the intercept and the coefficient for `speed`.
+Now, we apply the linear algebra formula to compute the coefficients. The formula \( \beta = (X^TX)^{-1}X^TY \) will give us the estimates for the intercept and the coefficient for `mpg`.
 
 ```{r}
 # Compute (X'X)^(-1)
@@ -120,12 +168,10 @@ beta <- XTX_inv %*% t(X) %*% Y
 beta
 ```
 
-This isn't as pretty but check that out! Let's just compare it to the built in lm function:
+This isn't as pretty but check that out! We can see that increasing the weight of the car by 1000 lbs results in a 3.85 mpg reduction holding the rest of the variables equal. the `Horsepower` and `Displacement (cu.in.)` show small effects, adding a cylinder to the engine reduces `mpg` by 1.29. The intercept here makes little sense because that would mean cars get around 41 mpg if they had 0 weight, `Horsepower`, etc.
 
-```{r}
-cars <- lm(mpg ~ wt + disp + hp + cyl, data = mtcars)
-summary(cars)
-```
+
+
 
 Math works! In all seriousness though computers are much faster at solving \( \beta = (X^TX)^{-1}X^TY \) than running that function, so if you are computing many \( \beta\)s at once, it can come in handy.
 
