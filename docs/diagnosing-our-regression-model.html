@@ -445,7 +445,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## F-statistic: 37.84 on 4 and 27 DF,  p-value: 1.061e-10</code></pre>
 <div id="residuals-analysis" class="section level2 hasAnchor" number="7.1">
 <h2><span class="header-section-number">7.1</span> Residuals Analysis<a href="diagnosing-our-regression-model.html#residuals-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Before we declare victory with our model, it’s crucial to take a deep dive into the residuals—those differences between what our model predicts and what we actually observe. Residuals tell us a lot about the adequacy of the model fit. They can reveal patterns that suggest improvements are necessary, such as adjusting for non-linearity, dealing with outliers, or correcting heteroscedasticity.</p>
+<p>Before we declare victory with our model, it’s crucial to take a deep dive into the residuals, those differences between what our model predicts and what we actually observe. Residuals tell us a lot about the adequacy of the model fit. They can reveal patterns that suggest improvements are necessary, such as adjusting for non-linearity, dealing with outliers, or correcting heteroscedasticity.</p>
 <div id="why-focus-on-residuals" class="section level3 hasAnchor" number="7.1.1">
 <h3><span class="header-section-number">7.1.1</span> Why Focus on Residuals?<a href="diagnosing-our-regression-model.html#why-focus-on-residuals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Residuals are the unexplained portion of the response variable by the predictors in the model. Ideally, these residuals should appear random and scattered without forming any identifiable patterns. Any pattern in the residuals suggests that the model is missing some aspect of the information, which is manifesting as a structure in the residuals.</p>
@@ -454,7 +454,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">7.1.2</span> Plotting Residuals Against Fitted Values<a href="diagnosing-our-regression-model.html#plotting-residuals-against-fitted-values" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To visually inspect these issues, we plot residuals against fitted values. This plot helps identify several potential problems in the regression model:</p>
 <div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="diagnosing-our-regression-model.html#cb29-1" tabindex="-1"></a><span class="fu">plot</span>(model, <span class="at">which =</span> <span class="dv">1</span>)  <span class="co"># Plots residuals against fitted values</span></span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 </div>
 <div id="what-to-look-for-in-the-plot" class="section level3 hasAnchor" number="7.1.3">
 <h3><span class="header-section-number">7.1.3</span> What to Look For in the Plot<a href="diagnosing-our-regression-model.html#what-to-look-for-in-the-plot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -488,11 +488,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>One of the most straightforward tools for checking normality is the Quantile-Quantile (Q-Q) plot. This plot helps us visually compare the distribution of the residuals to a perfect normal distribution. Here’s how you can generate this plot:</p>
 <div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="diagnosing-our-regression-model.html#cb30-1" tabindex="-1"></a><span class="fu">qqnorm</span>(<span class="fu">resid</span>(model))</span>
 <span id="cb30-2"><a href="diagnosing-our-regression-model.html#cb30-2" tabindex="-1"></a><span class="fu">qqline</span>(<span class="fu">resid</span>(model), <span class="at">col =</span> <span class="st">&quot;steelblue&quot;</span>)  <span class="co"># Adds a reference line to guide the eye</span></span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
 </div>
 <div id="interpreting-the-q-q-plot" class="section level3 hasAnchor" number="7.2.3">
 <h3><span class="header-section-number">7.2.3</span> Interpreting the Q-Q Plot<a href="diagnosing-our-regression-model.html#interpreting-the-q-q-plot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>In the Q-Q plot, the x-axis displays the theoretical quantiles of the normal distribution—essentially what we would expect if the residuals were perfectly normal. The y-axis shows the actual quantiles of the residuals from our model.</p>
+<p>In the Q-Q plot, the x-axis displays the theoretical quantiles of the normal distribution, essentially what we would expect if the residuals were perfectly normal. The y-axis shows the actual quantiles of the residuals from our model.</p>
 <ul>
 <li><p><strong>What to Look For:</strong> Ideally, the points should form a straight line along the reference line provided by <code>qqline()</code>. Deviations from this line indicate departures from normality:</p>
 <ul>
@@ -510,7 +510,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p><strong>Using different error structures:</strong> For instance, generalized linear models (GLMs) can accommodate a range of distributional assumptions beyond normality.</p></li>
 <li><p><strong>Robust regression techniques:</strong> These are less sensitive to deviations from normality and can provide reliable estimates even when this assumption is violated.</p></li>
 </ul>
-<p>By ensuring that our residuals approximate normality, we fortify the foundation of our model’s inferential statistics, leading to more reliable and interpretable outcomes. So always take the time to check the Q-Q plot—it’s a simple yet powerful diagnostic tool in your statistical toolkit.</p>
+<p>By ensuring that our residuals approximate normality, we fortify the foundation of our model’s inferential statistics, leading to more reliable and interpretable outcomes. So always take the time to check the Q-Q plot, it’s a simple yet powerful diagnostic tool in your statistical toolkit.</p>
 </div>
 </div>
 <div id="influence-measures" class="section level2 hasAnchor" number="7.3">
@@ -522,7 +522,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Here’s how you can generate a Cook’s distance plot:</p>
 <div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="diagnosing-our-regression-model.html#cb31-1" tabindex="-1"></a><span class="co"># Standard Cook&#39;s distance plot</span></span>
 <span id="cb31-2"><a href="diagnosing-our-regression-model.html#cb31-2" tabindex="-1"></a><span class="fu">plot</span>(model, <span class="at">which =</span> <span class="dv">4</span>)  <span class="co"># Cook&#39;s distance plot</span></span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
 </div>
 <div id="using-influenceplot-for-detailed-diagnostic" class="section level3 hasAnchor" number="7.3.2">
 <h3><span class="header-section-number">7.3.2</span> Using <code>influencePlot</code> for Detailed Diagnostic<a href="diagnosing-our-regression-model.html#using-influenceplot-for-detailed-diagnostic" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -532,7 +532,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb32-3"><a href="diagnosing-our-regression-model.html#cb32-3" tabindex="-1"></a><span class="fu">influencePlot</span>(model, <span class="at">scale=</span><span class="dv">10</span>,</span>
 <span id="cb32-4"><a href="diagnosing-our-regression-model.html#cb32-4" tabindex="-1"></a>              <span class="at">xlab=</span><span class="st">&quot;Hat-Values&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;Studentized Residuals&quot;</span>, <span class="at">id=</span><span class="cn">TRUE</span>,</span>
 <span id="cb32-5"><a href="diagnosing-our-regression-model.html#cb32-5" tabindex="-1"></a>              <span class="at">fill=</span><span class="cn">TRUE</span>, <span class="at">fill.col=</span><span class="fu">carPalette</span>()[<span class="dv">2</span>], <span class="at">fill.alpha=</span><span class="fl">0.5</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
 <pre><code>##                       StudRes        Hat      CookD
 ## Cadillac Fleetwood -0.5092918 0.26359434 0.01909245
 ## Chrysler Imperial   2.1551270 0.23781201 0.25536280
@@ -595,7 +595,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="autocorrelation-test" class="section level2 hasAnchor" number="7.5">
 <h2><span class="header-section-number">7.5</span> Autocorrelation Test<a href="diagnosing-our-regression-model.html#autocorrelation-test" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In the realm of time series analysis, one crucial assumption we often overlook is that of independence among residuals. When residuals are not independent—commonly seen as autocorrelation—it can lead to misleading inferences about the relationships in your data. This is because standard errors can become understated, leading to confidence intervals that are too narrow and p-values that falsely suggest significance.</p>
+<p>In the realm of time series analysis, one crucial assumption we often overlook is that of independence among residuals. When residuals are not independent, commonly seen as autocorrelation, it can lead to misleading inferences about the relationships in your data. This is because standard errors can become understated, leading to confidence intervals that are too narrow and p-values that falsely suggest significance.</p>
 <div id="what-is-autocorrelation" class="section level3 hasAnchor" number="7.5.1">
 <h3><span class="header-section-number">7.5.1</span> What is Autocorrelation?<a href="diagnosing-our-regression-model.html#what-is-autocorrelation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Autocorrelation occurs when the residuals from one time point are correlated with the residuals from another, which often happens in data collected over time. This can be due to trends, cyclic patterns, or other serial dependencies not captured by the model.</p>

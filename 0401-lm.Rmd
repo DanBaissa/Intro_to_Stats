@@ -18,7 +18,7 @@ summary(model)
 
 ## Residuals Analysis
 
-Before we declare victory with our model, it’s crucial to take a deep dive into the residuals—those differences between what our model predicts and what we actually observe. Residuals tell us a lot about the adequacy of the model fit. They can reveal patterns that suggest improvements are necessary, such as adjusting for non-linearity, dealing with outliers, or correcting heteroscedasticity.
+Before we declare victory with our model, it’s crucial to take a deep dive into the residuals, those differences between what our model predicts and what we actually observe. Residuals tell us a lot about the adequacy of the model fit. They can reveal patterns that suggest improvements are necessary, such as adjusting for non-linearity, dealing with outliers, or correcting heteroscedasticity.
 
 ### Why Focus on Residuals?
 
@@ -75,7 +75,7 @@ qqline(resid(model), col = "steelblue")  # Adds a reference line to guide the ey
 
 ### Interpreting the Q-Q Plot
 
-In the Q-Q plot, the x-axis displays the theoretical quantiles of the normal distribution—essentially what we would expect if the residuals were perfectly normal. The y-axis shows the actual quantiles of the residuals from our model.
+In the Q-Q plot, the x-axis displays the theoretical quantiles of the normal distribution, essentially what we would expect if the residuals were perfectly normal. The y-axis shows the actual quantiles of the residuals from our model.
 
 - **What to Look For:** Ideally, the points should form a straight line along the reference line provided by `qqline()`. Deviations from this line indicate departures from normality:
 
@@ -95,7 +95,7 @@ If the residuals deviate significantly from normality, it might affect the valid
 
 - **Robust regression techniques:** These are less sensitive to deviations from normality and can provide reliable estimates even when this assumption is violated.
 
-By ensuring that our residuals approximate normality, we fortify the foundation of our model’s inferential statistics, leading to more reliable and interpretable outcomes. So always take the time to check the Q-Q plot—it’s a simple yet powerful diagnostic tool in your statistical toolkit.
+By ensuring that our residuals approximate normality, we fortify the foundation of our model’s inferential statistics, leading to more reliable and interpretable outcomes. So always take the time to check the Q-Q plot, it’s a simple yet powerful diagnostic tool in your statistical toolkit.
 
 
 ## Influence Measures
@@ -186,7 +186,7 @@ Understanding and managing multicollinearity is crucial for ensuring the validit
 
 ## Autocorrelation Test
 
-In the realm of time series analysis, one crucial assumption we often overlook is that of independence among residuals. When residuals are not independent—commonly seen as autocorrelation—it can lead to misleading inferences about the relationships in your data. This is because standard errors can become understated, leading to confidence intervals that are too narrow and p-values that falsely suggest significance.
+In the realm of time series analysis, one crucial assumption we often overlook is that of independence among residuals. When residuals are not independent, commonly seen as autocorrelation, it can lead to misleading inferences about the relationships in your data. This is because standard errors can become understated, leading to confidence intervals that are too narrow and p-values that falsely suggest significance.
 
 ### What is Autocorrelation?
 

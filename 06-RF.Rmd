@@ -28,7 +28,7 @@ The algorithm:
 3. **Selects the split** that results in the highest gain.
 4. **Recursively applies** this process to the resulting subregions until a stopping criterion is met (e.g., a maximum tree depth, minimum number of samples in a leaf).
 
-This greedy approach ensures that the model is as accurate as possible at each step, given the previous splits, but it doesn't guarantee a globally optimal tree. This is where the power of random forests comes in—by building many trees, each based on a random subset of features and samples, and averaging their predictions, the ensemble model counters the variance and potential overfitting of individual trees.
+This greedy approach ensures that the model is as accurate as possible at each step, given the previous splits, but it doesn't guarantee a globally optimal tree. This is where the power of random forests comes in, by building many trees, each based on a random subset of features and samples, and averaging their predictions, the ensemble model counters the variance and potential overfitting of individual trees.
 
 ### Example: Decision Tree with the Iris Dataset
 

@@ -95,4 +95,4 @@ Here's what this equation is telling us:
 
 Understanding this objective function is like knowing the rules of the game. It helps us see why k-means makes certain decisions: grouping data points based on similarity, adjusting cluster centers, and iteratively refining groups. It’s about creating clusters that are as tight-knit and distinct as possible, which is essential when we’re trying to uncover hidden patterns in our data.
 
-This clustering isn’t just about neatness—it’s about making sense of the chaos. By minimizing the "distances" or differences within groups, k-means helps ensure that each cluster is a clear, distinct category that tells us something meaningful about the data. It’s a powerful way to turn raw data into insights that can inform real-world decisions.
+This clustering isn’t just about neatness, it’s about making sense of the chaos. By minimizing the "distances" or differences within groups, k-means helps ensure that each cluster is a clear, distinct category that tells us something meaningful about the data. It’s a powerful way to turn raw data into insights that can inform real-world decisions.

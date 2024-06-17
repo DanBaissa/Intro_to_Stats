@@ -4,7 +4,7 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 
 # Time Series: Forecasting Omicron
 
-In early 2020, as the Covid-19 pandemic unfolded, the world found itself in uncharted territory. With waves of infections rising and falling, many felt helpless, unable to predict when the next wave would hit or how severe it might be. In response, I turned to time series forecasting—a method often reserved for finance and weather predictions—to shed light on what many considered unpredictable: the future trajectory of Covid-19, especially hospitalization rates in the USA.
+In early 2020, as the Covid-19 pandemic unfolded, the world found itself in uncharted territory. With waves of infections rising and falling, many felt helpless, unable to predict when the next wave would hit or how severe it might be. In response, I turned to time series forecasting, a method often reserved for finance and weather predictions, to shed light on what many considered unpredictable: the future trajectory of Covid-19, especially hospitalization rates in the USA.
 
 ### The Power of Time Series Estimation
 
@@ -89,7 +89,7 @@ Now, let's "cheat" a little by shifting gears from traditional statistical model
 
 ### Why Neural Networks?
 
-While ARIMA is fantastic for linear relationships and patterns based on past values, it may miss out on more complex, nonlinear interactions in the data. This is where neural networks shine—they excel at capturing these nonlinear relationships without explicit specification from the user.
+While ARIMA is fantastic for linear relationships and patterns based on past values, it may miss out on more complex, nonlinear interactions in the data. This is where neural networks shine, they excel at capturing these nonlinear relationships without explicit specification from the user.
 
 ### Using `nnetar` for Time Series Forecasting
 

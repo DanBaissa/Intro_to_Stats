@@ -4,7 +4,7 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 
 # Robust Standard Errors: Tackling Heteroscedasticity
 
-When diving into regression analysis, one common assumption we make is that of homoscedasticity—that is, the variance of the residuals is constant across all levels of the independent variable. However, real-world data often violates this assumption, exhibiting heteroscedasticity, where the variance of the residuals increases or decreases along with the independent variable. This can distort standard error estimates and lead to misleading conclusions.
+When diving into regression analysis, one common assumption we make is that of homoscedasticity, that is, the variance of the residuals is constant across all levels of the independent variable. However, real-world data often violates this assumption, exhibiting heteroscedasticity, where the variance of the residuals increases or decreases along with the independent variable. This can distort standard error estimates and lead to misleading conclusions.
 
 ## Visualizing Heteroscedasticity
 
