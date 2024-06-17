@@ -442,7 +442,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb50-12"><a href="logistic-regression-going-beyond-linear-regression.html#cb50-12" tabindex="-1"></a></span>
 <span id="cb50-13"><a href="logistic-regression-going-beyond-linear-regression.html#cb50-13" tabindex="-1"></a><span class="co"># Add lines to indicate the midpoint transition</span></span>
 <span id="cb50-14"><a href="logistic-regression-going-beyond-linear-regression.html#cb50-14" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="fl">0.5</span>, <span class="at">v =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">&#39;black&#39;</span>, <span class="at">lty =</span> <span class="dv">2</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-50-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-42-1.png" width="672" /></p>
 </div>
 <div id="what-does-this-plot-show" class="section level3 hasAnchor" number="12.2.2">
 <h3><span class="header-section-number">12.2.2</span> What Does This Plot Show?<a href="logistic-regression-going-beyond-linear-regression.html#what-does-this-plot-show" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -498,7 +498,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="logistic-regression-going-beyond-linear-regression.html#cb54-1" tabindex="-1"></a><span class="co"># Plotting the fitted probabilities</span></span>
 <span id="cb54-2"><a href="logistic-regression-going-beyond-linear-regression.html#cb54-2" tabindex="-1"></a><span class="fu">plot</span>(student_data<span class="sc">$</span>hours_studied, student_data<span class="sc">$</span>pass, <span class="at">col =</span> <span class="fu">ifelse</span>(student_data<span class="sc">$</span>pass <span class="sc">==</span> <span class="dv">1</span>, <span class="st">&quot;green&quot;</span>, <span class="st">&quot;red&quot;</span>), <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">main =</span> <span class="st">&quot;Probability of Passing based on Hours Studied&quot;</span>)</span>
 <span id="cb54-3"><a href="logistic-regression-going-beyond-linear-regression.html#cb54-3" tabindex="-1"></a><span class="fu">curve</span>(<span class="fu">predict</span>(logit_model, <span class="fu">data.frame</span>(<span class="at">hours_studied =</span> x), <span class="at">type =</span> <span class="st">&quot;response&quot;</span>), <span class="at">add =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-53-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-45-1.png" width="672" /></p>
 <p>This plot shows the probability of a student passing based on their hours of study, with the logistic regression model providing a smooth probability curve.</p>
 
 </div>
