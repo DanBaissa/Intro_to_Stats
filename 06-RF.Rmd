@@ -22,6 +22,7 @@ A decision tree is trained using a process called recursive binary splitting. Th
 During the training of a decision tree, the best split at each node is chosen by selecting the split that maximizes the decrease in impurity from the parent node to the child nodes. Several metrics can be used to measure impurity, including Gini impurity, entropy, and classification error in classification tasks, or variance reduction in regression.
 
 The algorithm:
+
 1. **Considers every feature** and every possible value of each feature as a candidate split.
 2. **Calculates the impurity reduction** (or information gain) that would result from splitting on the candidate.
 3. **Selects the split** that results in the highest gain.

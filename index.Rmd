@@ -29,7 +29,7 @@ Hello and welcome! If you've ever felt baffled by statistics or wondered how dat
 
 ### Why This Book?
 
-This book is born from a passion for making complex concepts accessible and engaging. Statistics is often viewed as daunting and overly technical. My goal is to strip away these barriers and expose the beauty of statistics in its purest form. Whether you're a student, professional, or just a curious mind, I aim to equip you with the tools to understand and appreciate the power of statistical analysis. My goal here is to make these concepts as simple and approachable as possible! This means most of these concepts will be addressed at a high level for beginners so they can learn to dive and start working imediatly. 
+This book is born from a passion for making complex concepts accessible and engaging. Statistics is often viewed as daunting and overly technical. My goal is to strip away these barriers and expose the beauty of statistics in its purest form. Whether you're a student, professional, or just a curious mind, I aim to equip you with the tools to understand and appreciate the power of statistical analysis. My goal here is to make these concepts as simple and approachable as possible! This means most of these concepts will be addressed at a high level for beginners so they can learn to dive and start working immediately. 
 
 ### What Will You Learn?
 
@@ -37,23 +37,20 @@ From the basics of p-values and t-tests to the intricacies of machine learning m
 
 - **Understanding the Fundamentals:** Starting with hypothesis testing and the meaning behind statistical significance.
 
-- **Exploring Regression Models:** Diving deep into linear and logistic regression, and understanding how to interpret their results.
+- **Exploring Regression Models:** Diving into linear and logistic regression, and understanding how to interpret their results.
 
 - **Adventures in Machine Learning:** Taking our first baby steps into the realm of machine learning, leaning about random forest algorithms that can predict outcomes and uncover patterns.
 
-- **Real-World Applications:** Every concept is paired with practical examples and R code snippets that you can run yourself, reinforcing learning through doing.
+- **Real Applications:** Every concept is paired with practical examples and R code snippets that you can run yourself, reinforcing learning through doing.
 
 ### How to Use This Book
 
-Each chapter builds on the previous one, introducing new concepts while reinforcing old ones. The content is structured to be digested in bite-sized pieces, allowing you to learn at your own pace. Code examples are provided throughout, giving you hands-on experience with real statistical analysis tools.
+Feel free to jump around and explore content! The order of this book is similar to the one I used to teach data science, but if you want to skip ahead that is totally ok!  The content is structured to be digested in bite-sized pieces, allowing you to learn at your own pace. Code examples are provided throughout, giving you hands-on experience with real statistical analysis tools. Follow along, tweek my code, apply it to your own data and have fun!
 
-### A Note of Caution
-
-As we delve into the powerful tools of statistical analysis, remember the mantra: with great power comes great responsibility. We'll explore not only how to use these tools but also discuss the ethical considerations that come with wielding such analytical power.
 
 ## Let's Get Started!
 
-I invite you to bring your curiosity and enthusiasm. Let’s demystify the world of statistics together. By the end of this book, you won't just perform statistical analyses—you'll understand the story the data is trying to tell.
+I invite you to bring your curiosity and enthusiasm. Let’s demystify the world of statistics together. By the end of this book, you won't just perform statistical analyses, you'll understand the story the data is trying to tell.
 
 Ready to turn the page and start this exciting journey? Let's dive in!
 

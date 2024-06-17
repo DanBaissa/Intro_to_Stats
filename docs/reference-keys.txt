@@ -164,3 +164,4 @@ wrapping-up-fun-with-numbers
 embrace-the-power-use-it-wisely
 the-cautionary-note
 stay-curious
+logistic-regression-going-beyond-linear-regression

@@ -2,7 +2,7 @@
 knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
 ```
 
-# Going Beyond Linear Regression: Introduction to Logistic Regression
+# Logistic Regression: Going Beyond Linear Regression
 
 While linear regression is suited for continuous outcomes, what do we do when our dependent variable is binary, like "yes" or "no," "success" or "failure"? This is where logistic regression comes into play.
 
@@ -51,7 +51,7 @@ This plot beautifully illustrates the gradual, smooth transition of probabilitie
 
 Let's demonstrate logistic regression by considering a dataset where we predict whether a student passes (1) or fails (0) based on their hours of study.
 
-#### Setting Up the Problem
+### Setting Up the Problem
 
 ```{r}
 # Simulating some data
@@ -63,7 +63,7 @@ pass <- ifelse(hours_studied + rnorm(100, sd = 2) > 5, 1, 0)  # Pass if studied 
 student_data <- data.frame(hours_studied, pass)
 ```
 
-#### Fitting a Logistic Regression Model
+### Fitting a Logistic Regression Model
 
 ```{r}
 # Fitting the model
@@ -73,7 +73,7 @@ logit_model <- glm(pass ~ hours_studied, family = binomial(link = "logit"), data
 summary(logit_model)
 ```
 
-#### Visualizing the Results
+### Visualizing the Results
 
 ```{r}
 # Plotting the fitted probabilities
