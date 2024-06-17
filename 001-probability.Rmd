@@ -48,8 +48,8 @@ where:
 
 ```{r}
 # Plotting a Binomial Distribution
-x <- 0:20
-y <- dbinom(x, size = 20, prob = 0.5)
+x <- 0:1
+y <- dbinom(x, size = 1, prob = 0.6)
 plot(x, y, type = 'h', col = 'red', main = 'Binomial Distribution', xlab = 'Number of Successes', ylab = 'Probability')
 ```
 

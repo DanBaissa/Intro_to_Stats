@@ -338,15 +338,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.3.6" data-path="time-series-forecasting-omicron.html"><a href="time-series-forecasting-omicron.html#understanding-our-forecasting-models-performance"><i class="fa fa-check"></i><b>11.3.6</b> Understanding Our Forecasting Model’s Performance</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="going-beyond-linear-regression-introduction-to-logistic-regression.html"><a href="going-beyond-linear-regression-introduction-to-logistic-regression.html"><i class="fa fa-check"></i><b>12</b> Going Beyond Linear Regression: Introduction to Logistic Regression</a>
+<li class="chapter" data-level="12" data-path="logistic-regression-going-beyond-linear-regression.html"><a href="logistic-regression-going-beyond-linear-regression.html"><i class="fa fa-check"></i><b>12</b> Logistic Regression: Going Beyond Linear Regression</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="going-beyond-linear-regression-introduction-to-logistic-regression.html"><a href="going-beyond-linear-regression-introduction-to-logistic-regression.html#why-use-logistic-regression"><i class="fa fa-check"></i><b>12.1</b> Why Use Logistic Regression?</a></li>
-<li class="chapter" data-level="12.2" data-path="going-beyond-linear-regression-introduction-to-logistic-regression.html"><a href="going-beyond-linear-regression-introduction-to-logistic-regression.html#the-logistic-function"><i class="fa fa-check"></i><b>12.2</b> The Logistic Function</a>
+<li class="chapter" data-level="12.1" data-path="logistic-regression-going-beyond-linear-regression.html"><a href="logistic-regression-going-beyond-linear-regression.html#why-use-logistic-regression"><i class="fa fa-check"></i><b>12.1</b> Why Use Logistic Regression?</a></li>
+<li class="chapter" data-level="12.2" data-path="logistic-regression-going-beyond-linear-regression.html"><a href="logistic-regression-going-beyond-linear-regression.html#the-logistic-function"><i class="fa fa-check"></i><b>12.2</b> The Logistic Function</a>
 <ul>
-<li class="chapter" data-level="12.2.1" data-path="going-beyond-linear-regression-introduction-to-logistic-regression.html"><a href="going-beyond-linear-regression-introduction-to-logistic-regression.html#visualizing-the-sigmoid-function"><i class="fa fa-check"></i><b>12.2.1</b> Visualizing the Sigmoid Function</a></li>
-<li class="chapter" data-level="12.2.2" data-path="going-beyond-linear-regression-introduction-to-logistic-regression.html"><a href="going-beyond-linear-regression-introduction-to-logistic-regression.html#what-does-this-plot-show"><i class="fa fa-check"></i><b>12.2.2</b> What Does This Plot Show?</a></li>
+<li class="chapter" data-level="12.2.1" data-path="logistic-regression-going-beyond-linear-regression.html"><a href="logistic-regression-going-beyond-linear-regression.html#visualizing-the-sigmoid-function"><i class="fa fa-check"></i><b>12.2.1</b> Visualizing the Sigmoid Function</a></li>
+<li class="chapter" data-level="12.2.2" data-path="logistic-regression-going-beyond-linear-regression.html"><a href="logistic-regression-going-beyond-linear-regression.html#what-does-this-plot-show"><i class="fa fa-check"></i><b>12.2.2</b> What Does This Plot Show?</a></li>
 </ul></li>
-<li class="chapter" data-level="12.3" data-path="going-beyond-linear-regression-introduction-to-logistic-regression.html"><a href="going-beyond-linear-regression-introduction-to-logistic-regression.html#demonstration-in-r"><i class="fa fa-check"></i><b>12.3</b> Demonstration in R</a></li>
+<li class="chapter" data-level="12.3" data-path="logistic-regression-going-beyond-linear-regression.html"><a href="logistic-regression-going-beyond-linear-regression.html#demonstration-in-r"><i class="fa fa-check"></i><b>12.3</b> Demonstration in R</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="logistic-regression-going-beyond-linear-regression.html"><a href="logistic-regression-going-beyond-linear-regression.html#setting-up-the-problem-1"><i class="fa fa-check"></i><b>12.3.1</b> Setting Up the Problem</a></li>
+<li class="chapter" data-level="12.3.2" data-path="logistic-regression-going-beyond-linear-regression.html"><a href="logistic-regression-going-beyond-linear-regression.html#fitting-a-logistic-regression-model"><i class="fa fa-check"></i><b>12.3.2</b> Fitting a Logistic Regression Model</a></li>
+<li class="chapter" data-level="12.3.3" data-path="logistic-regression-going-beyond-linear-regression.html"><a href="logistic-regression-going-beyond-linear-regression.html#visualizing-the-results"><i class="fa fa-check"></i><b>12.3.3</b> Visualizing the Results</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="introduction-to-k-means-clustering.html"><a href="introduction-to-k-means-clustering.html"><i class="fa fa-check"></i><b>13</b> Introduction to K-Means Clustering</a>
 <ul>
@@ -434,25 +439,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="example-decision-tree-with-the-iris-dataset" class="section level3 hasAnchor" number="14.2.2">
 <h3><span class="header-section-number">14.2.2</span> Example: Decision Tree with the Iris Dataset<a href="introduction-to-machine-learning-random-forests.html#example-decision-tree-with-the-iris-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Now that we have a foundational understanding of how decision trees are trained, let’s apply this knowledge by training a model using the Iris dataset.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="introduction-to-machine-learning-random-forests.html#cb1-1" tabindex="-1"></a><span class="co"># Load necessary libraries</span></span>
-<span id="cb1-2"><a href="introduction-to-machine-learning-random-forests.html#cb1-2" tabindex="-1"></a><span class="fu">library</span>(rpart)</span>
-<span id="cb1-3"><a href="introduction-to-machine-learning-random-forests.html#cb1-3" tabindex="-1"></a><span class="fu">library</span>(rpart.plot)</span>
-<span id="cb1-4"><a href="introduction-to-machine-learning-random-forests.html#cb1-4" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="introduction-to-machine-learning-random-forests.html#cb1-5" tabindex="-1"></a><span class="co"># Split the data into training and test sets</span></span>
-<span id="cb1-6"><a href="introduction-to-machine-learning-random-forests.html#cb1-6" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)  <span class="co"># for reproducibility</span></span>
-<span id="cb1-7"><a href="introduction-to-machine-learning-random-forests.html#cb1-7" tabindex="-1"></a>train_index <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(iris), <span class="at">size =</span> <span class="fl">0.7</span> <span class="sc">*</span> <span class="fu">nrow</span>(iris))</span>
-<span id="cb1-8"><a href="introduction-to-machine-learning-random-forests.html#cb1-8" tabindex="-1"></a>train <span class="ot">&lt;-</span> iris[train_index, ]</span>
-<span id="cb1-9"><a href="introduction-to-machine-learning-random-forests.html#cb1-9" tabindex="-1"></a>test <span class="ot">&lt;-</span> iris[<span class="sc">-</span>train_index, ]</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="introduction-to-machine-learning-random-forests.html#cb58-1" tabindex="-1"></a><span class="co"># Load necessary libraries</span></span>
+<span id="cb58-2"><a href="introduction-to-machine-learning-random-forests.html#cb58-2" tabindex="-1"></a><span class="fu">library</span>(rpart)</span>
+<span id="cb58-3"><a href="introduction-to-machine-learning-random-forests.html#cb58-3" tabindex="-1"></a><span class="fu">library</span>(rpart.plot)</span>
+<span id="cb58-4"><a href="introduction-to-machine-learning-random-forests.html#cb58-4" tabindex="-1"></a></span>
+<span id="cb58-5"><a href="introduction-to-machine-learning-random-forests.html#cb58-5" tabindex="-1"></a><span class="co"># Split the data into training and test sets</span></span>
+<span id="cb58-6"><a href="introduction-to-machine-learning-random-forests.html#cb58-6" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)  <span class="co"># for reproducibility</span></span>
+<span id="cb58-7"><a href="introduction-to-machine-learning-random-forests.html#cb58-7" tabindex="-1"></a>train_index <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(iris), <span class="at">size =</span> <span class="fl">0.7</span> <span class="sc">*</span> <span class="fu">nrow</span>(iris))</span>
+<span id="cb58-8"><a href="introduction-to-machine-learning-random-forests.html#cb58-8" tabindex="-1"></a>train <span class="ot">&lt;-</span> iris[train_index, ]</span>
+<span id="cb58-9"><a href="introduction-to-machine-learning-random-forests.html#cb58-9" tabindex="-1"></a>test <span class="ot">&lt;-</span> iris[<span class="sc">-</span>train_index, ]</span></code></pre></div>
 <p>Now, let’s train a decision tree model on the training set. We’ll use the model to predict the species of iris based on its features (sepal length, sepal width, petal length, and petal width):</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="introduction-to-machine-learning-random-forests.html#cb2-1" tabindex="-1"></a><span class="co"># Train a decision tree model</span></span>
-<span id="cb2-2"><a href="introduction-to-machine-learning-random-forests.html#cb2-2" tabindex="-1"></a>tree <span class="ot">&lt;-</span> <span class="fu">rpart</span>(Species <span class="sc">~</span> ., <span class="at">data =</span> train, <span class="at">method =</span> <span class="st">&quot;class&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="introduction-to-machine-learning-random-forests.html#cb59-1" tabindex="-1"></a><span class="co"># Train a decision tree model</span></span>
+<span id="cb59-2"><a href="introduction-to-machine-learning-random-forests.html#cb59-2" tabindex="-1"></a>tree <span class="ot">&lt;-</span> <span class="fu">rpart</span>(Species <span class="sc">~</span> ., <span class="at">data =</span> train, <span class="at">method =</span> <span class="st">&quot;class&quot;</span>)</span></code></pre></div>
 </div>
 <div id="visualizing-the-decision-tree" class="section level3 hasAnchor" number="14.2.3">
 <h3><span class="header-section-number">14.2.3</span> Visualizing the Decision Tree<a href="introduction-to-machine-learning-random-forests.html#visualizing-the-decision-tree" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>With our model trained, we can visualize it to better understand how decisions are made:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="introduction-to-machine-learning-random-forests.html#cb3-1" tabindex="-1"></a><span class="co"># Plot the decision tree</span></span>
-<span id="cb3-2"><a href="introduction-to-machine-learning-random-forests.html#cb3-2" tabindex="-1"></a><span class="fu">rpart.plot</span>(tree, <span class="at">main =</span> <span class="st">&quot;Decision Tree for the Iris Dataset&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="introduction-to-machine-learning-random-forests.html#cb60-1" tabindex="-1"></a><span class="co"># Plot the decision tree</span></span>
+<span id="cb60-2"><a href="introduction-to-machine-learning-random-forests.html#cb60-2" tabindex="-1"></a><span class="fu">rpart.plot</span>(tree, <span class="at">main =</span> <span class="st">&quot;Decision Tree for the Iris Dataset&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-60-1.png" width="672" /></p>
 </div>
 <div id="decision-tree-insights" class="section level3 hasAnchor" number="14.2.4">
 <h3><span class="header-section-number">14.2.4</span> Decision Tree Insights<a href="introduction-to-machine-learning-random-forests.html#decision-tree-insights" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -479,15 +484,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="setting-up-the-problem-2" class="section level3 hasAnchor" number="14.3.1">
 <h3><span class="header-section-number">14.3.1</span> Setting Up the Problem<a href="introduction-to-machine-learning-random-forests.html#setting-up-the-problem-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Let’s use <code>iris</code> dataset again. We’ll predict the species of iris plants based on four features: sepal length, sepal width, petal length, and petal width.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="introduction-to-machine-learning-random-forests.html#cb4-1" tabindex="-1"></a><span class="co"># Load necessary library</span></span>
-<span id="cb4-2"><a href="introduction-to-machine-learning-random-forests.html#cb4-2" tabindex="-1"></a><span class="fu">library</span>(randomForest)</span>
-<span id="cb4-3"><a href="introduction-to-machine-learning-random-forests.html#cb4-3" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="introduction-to-machine-learning-random-forests.html#cb4-4" tabindex="-1"></a><span class="co"># Load the iris dataset</span></span>
-<span id="cb4-5"><a href="introduction-to-machine-learning-random-forests.html#cb4-5" tabindex="-1"></a><span class="fu">data</span>(iris)</span>
-<span id="cb4-6"><a href="introduction-to-machine-learning-random-forests.html#cb4-6" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="introduction-to-machine-learning-random-forests.html#cb4-7" tabindex="-1"></a><span class="co"># Fit a random forest model</span></span>
-<span id="cb4-8"><a href="introduction-to-machine-learning-random-forests.html#cb4-8" tabindex="-1"></a>rf_model <span class="ot">&lt;-</span> <span class="fu">randomForest</span>(Species <span class="sc">~</span> ., <span class="at">data =</span> iris, <span class="at">ntree =</span> <span class="dv">100</span>)</span>
-<span id="cb4-9"><a href="introduction-to-machine-learning-random-forests.html#cb4-9" tabindex="-1"></a><span class="fu">print</span>(rf_model)</span></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="introduction-to-machine-learning-random-forests.html#cb61-1" tabindex="-1"></a><span class="co"># Load necessary library</span></span>
+<span id="cb61-2"><a href="introduction-to-machine-learning-random-forests.html#cb61-2" tabindex="-1"></a><span class="fu">library</span>(randomForest)</span>
+<span id="cb61-3"><a href="introduction-to-machine-learning-random-forests.html#cb61-3" tabindex="-1"></a></span>
+<span id="cb61-4"><a href="introduction-to-machine-learning-random-forests.html#cb61-4" tabindex="-1"></a><span class="co"># Load the iris dataset</span></span>
+<span id="cb61-5"><a href="introduction-to-machine-learning-random-forests.html#cb61-5" tabindex="-1"></a><span class="fu">data</span>(iris)</span>
+<span id="cb61-6"><a href="introduction-to-machine-learning-random-forests.html#cb61-6" tabindex="-1"></a></span>
+<span id="cb61-7"><a href="introduction-to-machine-learning-random-forests.html#cb61-7" tabindex="-1"></a><span class="co"># Fit a random forest model</span></span>
+<span id="cb61-8"><a href="introduction-to-machine-learning-random-forests.html#cb61-8" tabindex="-1"></a>rf_model <span class="ot">&lt;-</span> <span class="fu">randomForest</span>(Species <span class="sc">~</span> ., <span class="at">data =</span> iris, <span class="at">ntree =</span> <span class="dv">100</span>)</span>
+<span id="cb61-9"><a href="introduction-to-machine-learning-random-forests.html#cb61-9" tabindex="-1"></a><span class="fu">print</span>(rf_model)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ##  randomForest(formula = Species ~ ., data = iris, ntree = 100) 
@@ -505,20 +510,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="visualizing-the-ensemble-effect" class="section level3 hasAnchor" number="14.3.2">
 <h3><span class="header-section-number">14.3.2</span> Visualizing the Ensemble Effect<a href="introduction-to-machine-learning-random-forests.html#visualizing-the-ensemble-effect" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>While we cannot visualize all trees at once, plotting the error rate as more trees are added can demonstrate the ensemble effect.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="introduction-to-machine-learning-random-forests.html#cb6-1" tabindex="-1"></a><span class="co"># Plot error rate versus number of trees</span></span>
-<span id="cb6-2"><a href="introduction-to-machine-learning-random-forests.html#cb6-2" tabindex="-1"></a><span class="fu">plot</span>(rf_model<span class="sc">$</span>err.rate[,<span class="dv">1</span>], <span class="at">type =</span> <span class="st">&quot;l&quot;</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span>
-<span id="cb6-3"><a href="introduction-to-machine-learning-random-forests.html#cb6-3" tabindex="-1"></a><span class="fu">title</span>(<span class="st">&quot;Error Rate of Random Forest Over Trees&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="introduction-to-machine-learning-random-forests.html#cb63-1" tabindex="-1"></a><span class="co"># Plot error rate versus number of trees</span></span>
+<span id="cb63-2"><a href="introduction-to-machine-learning-random-forests.html#cb63-2" tabindex="-1"></a><span class="fu">plot</span>(rf_model<span class="sc">$</span>err.rate[,<span class="dv">1</span>], <span class="at">type =</span> <span class="st">&quot;l&quot;</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span>
+<span id="cb63-3"><a href="introduction-to-machine-learning-random-forests.html#cb63-3" tabindex="-1"></a><span class="fu">title</span>(<span class="st">&quot;Error Rate of Random Forest Over Trees&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-62-1.png" width="672" /></p>
 <p>This plot typically shows that as more trees are added, the error rate of the random forest stabilizes, demonstrating the power of combining many models.</p>
 </div>
 <div id="using-the-model" class="section level3 hasAnchor" number="14.3.3">
 <h3><span class="header-section-number">14.3.3</span> Using the Model<a href="introduction-to-machine-learning-random-forests.html#using-the-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Let’s demonstrate using the trained model to predict the species of a new iris flower.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="introduction-to-machine-learning-random-forests.html#cb7-1" tabindex="-1"></a><span class="co"># New flower data</span></span>
-<span id="cb7-2"><a href="introduction-to-machine-learning-random-forests.html#cb7-2" tabindex="-1"></a>new_flower <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Sepal.Length =</span> <span class="fl">5.0</span>, <span class="at">Sepal.Width =</span> <span class="fl">3.5</span>, <span class="at">Petal.Length =</span> <span class="fl">1.4</span>, <span class="at">Petal.Width =</span> <span class="fl">0.2</span>)</span>
-<span id="cb7-3"><a href="introduction-to-machine-learning-random-forests.html#cb7-3" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="introduction-to-machine-learning-random-forests.html#cb7-4" tabindex="-1"></a><span class="co"># Predict the species</span></span>
-<span id="cb7-5"><a href="introduction-to-machine-learning-random-forests.html#cb7-5" tabindex="-1"></a><span class="fu">predict</span>(rf_model, new_flower)</span></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="introduction-to-machine-learning-random-forests.html#cb64-1" tabindex="-1"></a><span class="co"># New flower data</span></span>
+<span id="cb64-2"><a href="introduction-to-machine-learning-random-forests.html#cb64-2" tabindex="-1"></a>new_flower <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Sepal.Length =</span> <span class="fl">5.0</span>, <span class="at">Sepal.Width =</span> <span class="fl">3.5</span>, <span class="at">Petal.Length =</span> <span class="fl">1.4</span>, <span class="at">Petal.Width =</span> <span class="fl">0.2</span>)</span>
+<span id="cb64-3"><a href="introduction-to-machine-learning-random-forests.html#cb64-3" tabindex="-1"></a></span>
+<span id="cb64-4"><a href="introduction-to-machine-learning-random-forests.html#cb64-4" tabindex="-1"></a><span class="co"># Predict the species</span></span>
+<span id="cb64-5"><a href="introduction-to-machine-learning-random-forests.html#cb64-5" tabindex="-1"></a><span class="fu">predict</span>(rf_model, new_flower)</span></code></pre></div>
 <pre><code>##      1 
 ## setosa 
 ## Levels: setosa versicolor virginica</code></pre>
@@ -586,6 +591,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

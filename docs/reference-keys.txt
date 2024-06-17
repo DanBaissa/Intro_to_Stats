@@ -3,7 +3,6 @@ welcome-to-our-statistical-journey
 why-this-book
 what-will-you-learn
 how-to-use-this-book
-a-note-of-caution
 lets-get-started
 exploring-probability-distributions-with-visuals
 normal-distribution-the-bell
@@ -131,7 +130,7 @@ details-of-nnetar-function
 visualizing-neural-network-forecasts
 understanding-our-forecasting-models-performance
 analysis-of-the-prediction-peaks
-going-beyond-linear-regression-introduction-to-logistic-regression
+logistic-regression-going-beyond-linear-regression
 why-use-logistic-regression
 the-logistic-function
 visualizing-the-sigmoid-function
@@ -164,4 +163,3 @@ wrapping-up-fun-with-numbers
 embrace-the-power-use-it-wisely
 the-cautionary-note
 stay-curious
-logistic-regression-going-beyond-linear-regression

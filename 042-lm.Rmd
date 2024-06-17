@@ -20,15 +20,15 @@ M estimators work by modifying the loss function used in estimation. Instead of 
 - **Huber Weight Function:**
   - \( \psi(t) = 
     \begin{cases} 
-    t & \text{if } |t| \leq k \\
-    k \cdot \text{sign}(t) & \text{otherwise}
+    1 & \text{if } |t| \leq k \\
+    k / \lvert t\rvert & \text{otherwise}
     \end{cases} \)
   - The Huber weight function is piecewise linear, giving full weight to small residuals and decreasing the influence of large residuals.
 
 - **Tukey Biweight Function:**
   - \( \psi(t) = 
     \begin{cases} 
-    t \cdot (1 - \left(\frac{t}{k}\right)^2)^2 & \text{if } |t| \leq k \\
+    \Big(1 - \left(\frac{t}{k}\right)^2 \Big)^2 & \text{if } |t| \leq k \\
     0 & \text{otherwise}
     \end{cases} \)
   - The Tukey function is a smooth, bounded function that completely eliminates the influence of very large residuals.
