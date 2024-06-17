@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Introduction to Linear Regression | Introduction to Basic Stats Concepts</title>
+  <title>Chapter 6 Introduction to Linear Regression | A Basic Introduction to Stats Concepts</title>
   <meta name="description" content="“Dive into the world of statistics with ‘Introduction to Basic Stats Concepts.’ This book is designed to demystify complex statistical topics and make them accessible to everyone. Whether you’re a student starting out, a professional looking to refresh your knowledge, or a curious mind eager to understand how data shapes our understanding of the world, this book is for you. Featuring practical examples, detailed explanations, and interactive R code snippets, this guide is your first step towards mastering the fundamentals of statistics. Join us as we explore everything from p-values to machine learning, all explained in a clear and engaging manner.”" />
   <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Introduction to Linear Regression | Introduction to Basic Stats Concepts" />
+  <meta property="og:title" content="Chapter 6 Introduction to Linear Regression | A Basic Introduction to Stats Concepts" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="“Dive into the world of statistics with ‘Introduction to Basic Stats Concepts.’ This book is designed to demystify complex statistical topics and make them accessible to everyone. Whether you’re a student starting out, a professional looking to refresh your knowledge, or a curious mind eager to understand how data shapes our understanding of the world, this book is for you. Featuring practical examples, detailed explanations, and interactive R code snippets, this guide is your first step towards mastering the fundamentals of statistics. Join us as we explore everything from p-values to machine learning, all explained in a clear and engaging manner.”" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Introduction to Linear Regression | Introduction to Basic Stats Concepts" />
+  <meta name="twitter:title" content="Chapter 6 Introduction to Linear Regression | A Basic Introduction to Stats Concepts" />
   
   <meta name="twitter:description" content="“Dive into the world of statistics with ‘Introduction to Basic Stats Concepts.’ This book is designed to demystify complex statistical topics and make them accessible to everyone. Whether you’re a student starting out, a professional looking to refresh your knowledge, or a curious mind eager to understand how data shapes our understanding of the world, this book is for you. Featuring practical examples, detailed explanations, and interactive R code snippets, this guide is your first step towards mastering the fundamentals of statistics. Join us as we explore everything from p-values to machine learning, all explained in a clear and engaging manner.”" />
   
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Introduction to Basic Stats Concepts</a></li>
+<li><a href="./">A Basic Introduction to Stats Concepts</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
@@ -401,7 +401,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Basic Stats Concepts</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Basic Introduction to Stats Concepts</a>
           </h1>
         </div>
 
@@ -433,7 +433,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb15-8"><a href="introduction-to-linear-regression.html#cb15-8" tabindex="-1"></a><span class="fu">lines</span>(x, <span class="dv">4</span><span class="sc">*</span>x <span class="sc">-</span> <span class="dv">40</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)  <span class="co"># Dan&#39;s line</span></span>
 <span id="cb15-9"><a href="introduction-to-linear-regression.html#cb15-9" tabindex="-1"></a><span class="fu">lines</span>(x, .<span class="dv">5</span><span class="sc">*</span>x <span class="sc">+</span> <span class="dv">30</span>, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)  <span class="co"># Steve&#39;s line</span></span>
 <span id="cb15-10"><a href="introduction-to-linear-regression.html#cb15-10" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">&quot;topright&quot;</span>, <span class="at">legend=</span><span class="fu">c</span>(<span class="st">&quot;Dan&quot;</span>, <span class="st">&quot;Steve&quot;</span>), <span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;blue&quot;</span>), <span class="at">lty=</span><span class="dv">1</span>, <span class="at">cex=</span><span class="fl">0.8</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
 </div>
 <div id="finding-the-best-fit" class="section level3 hasAnchor" number="6.1.2">
 <h3><span class="header-section-number">6.1.2</span> Finding the Best Fit<a href="introduction-to-linear-regression.html#finding-the-best-fit" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -467,7 +467,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb16-24"><a href="introduction-to-linear-regression.html#cb16-24" tabindex="-1"></a></span>
 <span id="cb16-25"><a href="introduction-to-linear-regression.html#cb16-25" tabindex="-1"></a><span class="co"># Add a legend for the residuals</span></span>
 <span id="cb16-26"><a href="introduction-to-linear-regression.html#cb16-26" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">&quot;bottomright&quot;</span>, <span class="at">legend=</span><span class="fu">c</span>(<span class="st">&quot;Residuals&quot;</span>), <span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;black&quot;</span>), <span class="at">lty=</span><span class="dv">1</span>, <span class="at">cex=</span><span class="fl">0.8</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
 <p>Here we can see that the Least Squares line goes right through the middle and on average the distance from the line, the “residuals” are about the same on top as they are on the bottom.</p>
 </div>
 </div>

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 12 Going Beyond Linear Regression: Introduction to Logistic Regression | Introduction to Basic Stats Concepts</title>
+  <title>Chapter 12 Going Beyond Linear Regression: Introduction to Logistic Regression | A Basic Introduction to Stats Concepts</title>
   <meta name="description" content="“Dive into the world of statistics with ‘Introduction to Basic Stats Concepts.’ This book is designed to demystify complex statistical topics and make them accessible to everyone. Whether you’re a student starting out, a professional looking to refresh your knowledge, or a curious mind eager to understand how data shapes our understanding of the world, this book is for you. Featuring practical examples, detailed explanations, and interactive R code snippets, this guide is your first step towards mastering the fundamentals of statistics. Join us as we explore everything from p-values to machine learning, all explained in a clear and engaging manner.”" />
   <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 12 Going Beyond Linear Regression: Introduction to Logistic Regression | Introduction to Basic Stats Concepts" />
+  <meta property="og:title" content="Chapter 12 Going Beyond Linear Regression: Introduction to Logistic Regression | A Basic Introduction to Stats Concepts" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="“Dive into the world of statistics with ‘Introduction to Basic Stats Concepts.’ This book is designed to demystify complex statistical topics and make them accessible to everyone. Whether you’re a student starting out, a professional looking to refresh your knowledge, or a curious mind eager to understand how data shapes our understanding of the world, this book is for you. Featuring practical examples, detailed explanations, and interactive R code snippets, this guide is your first step towards mastering the fundamentals of statistics. Join us as we explore everything from p-values to machine learning, all explained in a clear and engaging manner.”" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 12 Going Beyond Linear Regression: Introduction to Logistic Regression | Introduction to Basic Stats Concepts" />
+  <meta name="twitter:title" content="Chapter 12 Going Beyond Linear Regression: Introduction to Logistic Regression | A Basic Introduction to Stats Concepts" />
   
   <meta name="twitter:description" content="“Dive into the world of statistics with ‘Introduction to Basic Stats Concepts.’ This book is designed to demystify complex statistical topics and make them accessible to everyone. Whether you’re a student starting out, a professional looking to refresh your knowledge, or a curious mind eager to understand how data shapes our understanding of the world, this book is for you. Featuring practical examples, detailed explanations, and interactive R code snippets, this guide is your first step towards mastering the fundamentals of statistics. Join us as we explore everything from p-values to machine learning, all explained in a clear and engaging manner.”" />
   
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Introduction to Basic Stats Concepts</a></li>
+<li><a href="./">A Basic Introduction to Stats Concepts</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
@@ -401,7 +401,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Basic Stats Concepts</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Basic Introduction to Stats Concepts</a>
           </h1>
         </div>
 
@@ -438,7 +438,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb50-12"><a href="going-beyond-linear-regression-introduction-to-logistic-regression.html#cb50-12" tabindex="-1"></a></span>
 <span id="cb50-13"><a href="going-beyond-linear-regression-introduction-to-logistic-regression.html#cb50-13" tabindex="-1"></a><span class="co"># Add lines to indicate the midpoint transition</span></span>
 <span id="cb50-14"><a href="going-beyond-linear-regression-introduction-to-logistic-regression.html#cb50-14" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="fl">0.5</span>, <span class="at">v =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">&#39;black&#39;</span>, <span class="at">lty =</span> <span class="dv">2</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-56-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-47-1.png" width="672" /></p>
 </div>
 <div id="what-does-this-plot-show" class="section level3 hasAnchor" number="12.2.2">
 <h3><span class="header-section-number">12.2.2</span> What Does This Plot Show?<a href="going-beyond-linear-regression-introduction-to-logistic-regression.html#what-does-this-plot-show" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -494,7 +494,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="going-beyond-linear-regression-introduction-to-logistic-regression.html#cb54-1" tabindex="-1"></a><span class="co"># Plotting the fitted probabilities</span></span>
 <span id="cb54-2"><a href="going-beyond-linear-regression-introduction-to-logistic-regression.html#cb54-2" tabindex="-1"></a><span class="fu">plot</span>(student_data<span class="sc">$</span>hours_studied, student_data<span class="sc">$</span>pass, <span class="at">col =</span> <span class="fu">ifelse</span>(student_data<span class="sc">$</span>pass <span class="sc">==</span> <span class="dv">1</span>, <span class="st">&quot;green&quot;</span>, <span class="st">&quot;red&quot;</span>), <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">main =</span> <span class="st">&quot;Probability of Passing based on Hours Studied&quot;</span>)</span>
 <span id="cb54-3"><a href="going-beyond-linear-regression-introduction-to-logistic-regression.html#cb54-3" tabindex="-1"></a><span class="fu">curve</span>(<span class="fu">predict</span>(logit_model, <span class="fu">data.frame</span>(<span class="at">hours_studied =</span> x), <span class="at">type =</span> <span class="st">&quot;response&quot;</span>), <span class="at">add =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-59-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-50-1.png" width="672" /></p>
 <p>This plot shows the probability of a student passing based on their hours of study, with the logistic regression model providing a smooth probability curve.</p>
 
 </div>

@@ -1,5 +1,5 @@
 --- 
-title: "Introduction to Basic Stats Concepts"
+title: "A Basic Introduction to Stats Concepts"
 author: "Daniel K Baissa"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site

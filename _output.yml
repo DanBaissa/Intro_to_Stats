@@ -3,7 +3,7 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><a href="./">Introduction to Basic Stats Concepts</a></li>
+        <li><a href="./">A Basic Introduction to Stats Concepts</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     edit: https://github.com/DanBaissa/Intro_to_Stats/edit/master/%s
