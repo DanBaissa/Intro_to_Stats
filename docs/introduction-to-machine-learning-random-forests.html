@@ -23,7 +23,7 @@
 <meta name="author" content="Daniel K Baissa" />
 
 
-<meta name="date" content="2024-06-15" />
+<meta name="date" content="2024-06-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -451,7 +451,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>With our model trained, we can visualize it to better understand how decisions are made:</p>
 <div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="introduction-to-machine-learning-random-forests.html#cb60-1" tabindex="-1"></a><span class="co"># Plot the decision tree</span></span>
 <span id="cb60-2"><a href="introduction-to-machine-learning-random-forests.html#cb60-2" tabindex="-1"></a><span class="fu">rpart.plot</span>(tree, <span class="at">main =</span> <span class="st">&quot;Decision Tree for the Iris Dataset&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-103-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-66-1.png" width="672" /></p>
 </div>
 <div id="decision-tree-insights" class="section level3 hasAnchor" number="14.2.4">
 <h3><span class="header-section-number">14.2.4</span> Decision Tree Insights<a href="introduction-to-machine-learning-random-forests.html#decision-tree-insights" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -507,7 +507,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="introduction-to-machine-learning-random-forests.html#cb63-1" tabindex="-1"></a><span class="co"># Plot error rate versus number of trees</span></span>
 <span id="cb63-2"><a href="introduction-to-machine-learning-random-forests.html#cb63-2" tabindex="-1"></a><span class="fu">plot</span>(rf_model<span class="sc">$</span>err.rate[,<span class="dv">1</span>], <span class="at">type =</span> <span class="st">&quot;l&quot;</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span>
 <span id="cb63-3"><a href="introduction-to-machine-learning-random-forests.html#cb63-3" tabindex="-1"></a><span class="fu">title</span>(<span class="st">&quot;Error Rate of Random Forest Over Trees&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-105-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-68-1.png" width="672" /></p>
 <p>This plot typically shows that as more trees are added, the error rate of the random forest stabilizes, demonstrating the power of combining many models.</p>
 </div>
 <div id="using-the-model" class="section level3 hasAnchor" number="14.3.3">

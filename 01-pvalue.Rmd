@@ -37,8 +37,8 @@ density_values <- dnorm(z_scores)  # Normal density
 data_for_plot <- data.frame(z_scores, density_values) %>%
   mutate(
     fill_color = case_when(
-      z_scores < -1.96 | z_scores > 1.96 & z_scores < -2.58 | z_scores > 2.58 ~ "blue",
-      z_scores < -1.96 | z_scores > 1.96 ~ "red",
+      (z_scores < -2.58 | z_scores > 2.58) ~ "blue",
+      (z_scores < -1.96 | z_scores > 1.96) ~ "red",
       TRUE ~ NA_character_
     )
   )
@@ -46,24 +46,27 @@ data_for_plot <- data.frame(z_scores, density_values) %>%
 # Create the plot
 p_value_plot <- ggplot(data_for_plot, aes(x = z_scores, y = density_values)) +
   geom_line() +
-  # geom_area(aes(fill = fill_color), alpha = 0.2) +
+  geom_area(aes(fill = fill_color), alpha = 0.2) +
   scale_fill_manual(values = c("red" = "red", "blue" = "blue")) +
   geom_vline(xintercept = c(-1.96, 1.96), linetype = "dashed", color = "red") +
   geom_vline(xintercept = c(-2.58, 2.58), linetype = "dashed", color = "blue") +
   labs(
-    title = "Visualizing p-values in terms of Sigma",
-    subtitle = "Red: p < 0.05 (approx. 2-sigma), Blue: p < 0.01 (approx. 3-sigma)",
+    title = "Visualizing two tail p-values in terms of Sigma",
+    subtitle = "Red: p < 0.05, Blue: p < 0.01",
     x = "Z-score (Sigma)",
-    y = "Density"
+    y = "Density",
+    fill = "Fill Color" 
   ) +
-  theme_minimal()
+  theme_minimal()+
+  guides(fill = "none")
 
 p_value_plot
 ```
 
 ### What's Going on Here?
 
-- **Red Zones:** These areas show where our results would fall if they were more than 1.96 standard deviations away from the mean (either side). Statistically, this represents a p-value less than 0.05, where we start to raise our eyebrows and think, "Hmm, maybe there's something interesting going on here."
+- **Red Zones:** The red vertical lines show where our results would fall if they were more than 1.96 standard deviations away from the mean (either side). Statistically, this represents a p-value less than 0.05, where many scientific fields consider a finding statically significant.
+
 - **Blue Zones:** Even more extreme, these parts of the curve represent results more than 2.58 standard deviations from the mean. Here, with a p-value less than 0.01, our eyebrows aren't just raised, they're practically in our hairline, signaling even stronger evidence against the Null Hypothesis.
 
 ### Takeaway

@@ -23,7 +23,7 @@
 <meta name="author" content="Daniel K Baissa" />
 
 
-<meta name="date" content="2024-06-15" />
+<meta name="date" content="2024-06-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -437,8 +437,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb6-9"><a href="understanding-the-p-value.html#cb6-9" tabindex="-1"></a>data_for_plot <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(z_scores, density_values) <span class="sc">%&gt;%</span></span>
 <span id="cb6-10"><a href="understanding-the-p-value.html#cb6-10" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
 <span id="cb6-11"><a href="understanding-the-p-value.html#cb6-11" tabindex="-1"></a>    <span class="at">fill_color =</span> <span class="fu">case_when</span>(</span>
-<span id="cb6-12"><a href="understanding-the-p-value.html#cb6-12" tabindex="-1"></a>      z_scores <span class="sc">&lt;</span> <span class="sc">-</span><span class="fl">1.96</span> <span class="sc">|</span> z_scores <span class="sc">&gt;</span> <span class="fl">1.96</span> <span class="sc">&amp;</span> z_scores <span class="sc">&lt;</span> <span class="sc">-</span><span class="fl">2.58</span> <span class="sc">|</span> z_scores <span class="sc">&gt;</span> <span class="fl">2.58</span> <span class="sc">~</span> <span class="st">&quot;blue&quot;</span>,</span>
-<span id="cb6-13"><a href="understanding-the-p-value.html#cb6-13" tabindex="-1"></a>      z_scores <span class="sc">&lt;</span> <span class="sc">-</span><span class="fl">1.96</span> <span class="sc">|</span> z_scores <span class="sc">&gt;</span> <span class="fl">1.96</span> <span class="sc">~</span> <span class="st">&quot;red&quot;</span>,</span>
+<span id="cb6-12"><a href="understanding-the-p-value.html#cb6-12" tabindex="-1"></a>      (z_scores <span class="sc">&lt;</span> <span class="sc">-</span><span class="fl">2.58</span> <span class="sc">|</span> z_scores <span class="sc">&gt;</span> <span class="fl">2.58</span>) <span class="sc">~</span> <span class="st">&quot;blue&quot;</span>,</span>
+<span id="cb6-13"><a href="understanding-the-p-value.html#cb6-13" tabindex="-1"></a>      (z_scores <span class="sc">&lt;</span> <span class="sc">-</span><span class="fl">1.96</span> <span class="sc">|</span> z_scores <span class="sc">&gt;</span> <span class="fl">1.96</span>) <span class="sc">~</span> <span class="st">&quot;red&quot;</span>,</span>
 <span id="cb6-14"><a href="understanding-the-p-value.html#cb6-14" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA_character_</span></span>
 <span id="cb6-15"><a href="understanding-the-p-value.html#cb6-15" tabindex="-1"></a>    )</span>
 <span id="cb6-16"><a href="understanding-the-p-value.html#cb6-16" tabindex="-1"></a>  )</span>
@@ -446,26 +446,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb6-18"><a href="understanding-the-p-value.html#cb6-18" tabindex="-1"></a><span class="co"># Create the plot</span></span>
 <span id="cb6-19"><a href="understanding-the-p-value.html#cb6-19" tabindex="-1"></a>p_value_plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(data_for_plot, <span class="fu">aes</span>(<span class="at">x =</span> z_scores, <span class="at">y =</span> density_values)) <span class="sc">+</span></span>
 <span id="cb6-20"><a href="understanding-the-p-value.html#cb6-20" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb6-21"><a href="understanding-the-p-value.html#cb6-21" tabindex="-1"></a>  <span class="co"># geom_area(aes(fill = fill_color), alpha = 0.2) +</span></span>
+<span id="cb6-21"><a href="understanding-the-p-value.html#cb6-21" tabindex="-1"></a>  <span class="fu">geom_area</span>(<span class="fu">aes</span>(<span class="at">fill =</span> fill_color), <span class="at">alpha =</span> <span class="fl">0.2</span>) <span class="sc">+</span></span>
 <span id="cb6-22"><a href="understanding-the-p-value.html#cb6-22" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;red&quot;</span> <span class="ot">=</span> <span class="st">&quot;red&quot;</span>, <span class="st">&quot;blue&quot;</span> <span class="ot">=</span> <span class="st">&quot;blue&quot;</span>)) <span class="sc">+</span></span>
 <span id="cb6-23"><a href="understanding-the-p-value.html#cb6-23" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">1.96</span>, <span class="fl">1.96</span>), <span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>, <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
 <span id="cb6-24"><a href="understanding-the-p-value.html#cb6-24" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">2.58</span>, <span class="fl">2.58</span>), <span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>, <span class="at">color =</span> <span class="st">&quot;blue&quot;</span>) <span class="sc">+</span></span>
 <span id="cb6-25"><a href="understanding-the-p-value.html#cb6-25" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb6-26"><a href="understanding-the-p-value.html#cb6-26" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;Visualizing p-values in terms of Sigma&quot;</span>,</span>
-<span id="cb6-27"><a href="understanding-the-p-value.html#cb6-27" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">&quot;Red: p &lt; 0.05 (approx. 2-sigma), Blue: p &lt; 0.01 (approx. 3-sigma)&quot;</span>,</span>
+<span id="cb6-26"><a href="understanding-the-p-value.html#cb6-26" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;Visualizing two tail p-values in terms of Sigma&quot;</span>,</span>
+<span id="cb6-27"><a href="understanding-the-p-value.html#cb6-27" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">&quot;Red: p &lt; 0.05, Blue: p &lt; 0.01&quot;</span>,</span>
 <span id="cb6-28"><a href="understanding-the-p-value.html#cb6-28" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Z-score (Sigma)&quot;</span>,</span>
-<span id="cb6-29"><a href="understanding-the-p-value.html#cb6-29" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Density&quot;</span></span>
-<span id="cb6-30"><a href="understanding-the-p-value.html#cb6-30" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb6-31"><a href="understanding-the-p-value.html#cb6-31" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb6-32"><a href="understanding-the-p-value.html#cb6-32" tabindex="-1"></a></span>
-<span id="cb6-33"><a href="understanding-the-p-value.html#cb6-33" tabindex="-1"></a>p_value_plot</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-55-1.png" width="672" /></p>
+<span id="cb6-29"><a href="understanding-the-p-value.html#cb6-29" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Density&quot;</span>,</span>
+<span id="cb6-30"><a href="understanding-the-p-value.html#cb6-30" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">&quot;Fill Color&quot;</span> </span>
+<span id="cb6-31"><a href="understanding-the-p-value.html#cb6-31" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb6-32"><a href="understanding-the-p-value.html#cb6-32" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()<span class="sc">+</span></span>
+<span id="cb6-33"><a href="understanding-the-p-value.html#cb6-33" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="st">&quot;none&quot;</span>)</span>
+<span id="cb6-34"><a href="understanding-the-p-value.html#cb6-34" tabindex="-1"></a></span>
+<span id="cb6-35"><a href="understanding-the-p-value.html#cb6-35" tabindex="-1"></a>p_value_plot</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
 </div>
 <div id="whats-going-on-here" class="section level3 hasAnchor" number="3.2.3">
 <h3><span class="header-section-number">3.2.3</span> What’s Going on Here?<a href="understanding-the-p-value.html#whats-going-on-here" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
-<li><strong>Red Zones:</strong> These areas show where our results would fall if they were more than 1.96 standard deviations away from the mean (either side). Statistically, this represents a p-value less than 0.05, where we start to raise our eyebrows and think, “Hmm, maybe there’s something interesting going on here.”</li>
-<li><strong>Blue Zones:</strong> Even more extreme, these parts of the curve represent results more than 2.58 standard deviations from the mean. Here, with a p-value less than 0.01, our eyebrows aren’t just raised, they’re practically in our hairline, signaling even stronger evidence against the Null Hypothesis.</li>
+<li><p><strong>Red Zones:</strong> The red vertical lines show where our results would fall if they were more than 1.96 standard deviations away from the mean (either side). Statistically, this represents a p-value less than 0.05, where many scientific fields consider a finding statically significant.</p></li>
+<li><p><strong>Blue Zones:</strong> Even more extreme, these parts of the curve represent results more than 2.58 standard deviations from the mean. Here, with a p-value less than 0.01, our eyebrows aren’t just raised, they’re practically in our hairline, signaling even stronger evidence against the Null Hypothesis.</p></li>
 </ul>
 </div>
 <div id="takeaway" class="section level3 hasAnchor" number="3.2.4">
@@ -491,7 +493,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb7-11"><a href="understanding-the-p-value.html#cb7-11" tabindex="-1"></a><span class="fu">plot</span>(p_values, <span class="at">type =</span> <span class="st">&quot;p&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">main =</span> <span class="st">&quot;Simulated p-values from 100 t-tests&quot;</span>,</span>
 <span id="cb7-12"><a href="understanding-the-p-value.html#cb7-12" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Simulation Number&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;p-value&quot;</span>)</span>
 <span id="cb7-13"><a href="understanding-the-p-value.html#cb7-13" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="fl">0.05</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)  <span class="co"># Line at p-value = 0.05</span></span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-56-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
 </div>
 <div id="whats-happening-here-1" class="section level3 hasAnchor" number="3.3.2">
 <h3><span class="header-section-number">3.3.2</span> What’s Happening Here?<a href="understanding-the-p-value.html#whats-happening-here-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
