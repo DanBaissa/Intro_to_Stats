@@ -509,7 +509,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb47-2"><a href="time-series-forecasting-omicron.html#cb47-2" tabindex="-1"></a>forecast_ori <span class="ot">&lt;-</span> <span class="fu">forecast</span>(arima, <span class="at">h =</span> <span class="dv">30</span>, <span class="at">level =</span> <span class="fu">c</span>(<span class="dv">80</span>, <span class="dv">95</span>))</span>
 <span id="cb47-3"><a href="time-series-forecasting-omicron.html#cb47-3" tabindex="-1"></a>hospitalizations <span class="ot">&lt;-</span> <span class="fu">ts</span>(hospitalizations)</span>
 <span id="cb47-4"><a href="time-series-forecasting-omicron.html#cb47-4" tabindex="-1"></a>forecast_ori <span class="sc">%&gt;%</span> <span class="fu">autoplot</span>() <span class="sc">+</span> <span class="fu">autolayer</span>(hospitalizations)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/arima-1.png" width="672" /></p>
 <p>This model forecasts the next 30 days of hospitalizations, providing predictions along with confidence intervals (80% and 95%). It gives us an overall trend line that tells us that something may be coming.</p>
 </div>
 </div>
@@ -591,7 +591,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb49-37"><a href="time-series-forecasting-omicron.html#cb49-37" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Date&quot;</span>,  <span class="co"># Setting the label for the x-axis</span></span>
 <span id="cb49-38"><a href="time-series-forecasting-omicron.html#cb49-38" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Hospitalizations&quot;</span>,  <span class="co"># Setting the label for the y-axis</span></span>
 <span id="cb49-39"><a href="time-series-forecasting-omicron.html#cb49-39" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">&quot;Hospitalization Data Overview&quot;</span>) </span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/nn-1.png" width="672" /></p>
 </div>
 <div id="understanding-our-forecasting-models-performance" class="section level3 hasAnchor" number="11.3.6">
 <h3><span class="header-section-number">11.3.6</span> Understanding Our Forecasting Model’s Performance<a href="time-series-forecasting-omicron.html#understanding-our-forecasting-models-performance" class="anchor-section" aria-label="Anchor link to header"></a></h3>

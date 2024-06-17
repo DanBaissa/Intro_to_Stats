@@ -57,7 +57,7 @@ tree <- rpart(Species ~ ., data = train, method = "class")
 
 With our model trained, we can visualize it to better understand how decisions are made:
 
-```{r}
+```{r, rf1}
 # Plot the decision tree
 rpart.plot(tree, main = "Decision Tree for the Iris Dataset")
 ```
@@ -106,7 +106,7 @@ print(rf_model)
 
 While we cannot visualize all trees at once, plotting the error rate as more trees are added can demonstrate the ensemble effect.
 
-```{r}
+```{r, rf2}
 # Plot error rate versus number of trees
 plot(rf_model$err.rate[,1], type = "l", col = "red")
 title("Error Rate of Random Forest Over Trees")

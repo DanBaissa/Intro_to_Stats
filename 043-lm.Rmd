@@ -10,7 +10,7 @@ When diving into regression analysis, one common assumption we make is that of h
 
 First, let's visualize what heteroscedasticity looks like and then see how it affects the results of Ordinary Least Squares (OLS) regression.
 
-```{r}
+```{r, het}
 set.seed(42)
 # Generate heteroscedastic data
 x <- 1:100

@@ -41,7 +41,7 @@ MM estimators build on the concept of M estimators by ensuring high breakdown po
 
 Let's simulate some data, introduce outliers, and see how OLS and MM estimators handle it:
 
-```{r}
+```{r, rob1}
 library(MASS)  # for robust estimation functions
 set.seed(42)
 
@@ -78,7 +78,7 @@ In this example, we'll explore the resilience of robust estimation methods by de
 
 We start by generating a simple linear dataset with `x` as the predictor and `y` as the response. To test the robustness of our estimators, we'll add a substantial upward shift to 35% of the response values, simulating a scenario where a large chunk of our data might be compromised or erroneous.
 
-```{r}
+```{r, rob2}
 library(MASS)  # for robust estimation functions
 set.seed(42)
 

@@ -25,7 +25,7 @@ In statistics, when we talk about sigma (σ), we're really diving into the world
 
 Let's paint this picture. We're going to plot a standard normal distribution (you know, that classic bell-shaped curve) and shade the areas that correspond to significant p-values.
 
-```{r}
+```{r, pvalue}
 library(ggplot2)
 library(dplyr)
 
@@ -82,7 +82,7 @@ It is a lot easier to grasp the concept of p-values when you see them, so let's 
 
 ### Simulating Multiple t-tests
 
-```{r}
+```{r, sims_pvalue}
 # Set the seed for reproducibility
 set.seed(42)
 

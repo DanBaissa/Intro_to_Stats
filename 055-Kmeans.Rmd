@@ -49,7 +49,7 @@ print(km_result$centers)
 
 To see our clustering in action, let’s plot the clusters along with the centroids:
 
-```{r}
+```{r, km}
 library(ggplot2)
 
 # Create a data frame with the cluster assignments

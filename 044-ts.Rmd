@@ -73,7 +73,7 @@ We used the automatic ARIMA to determine which is the best model. We can see her
 
 Once the best model is selected (ARIMA(2,1,5) in this case), it can be used to forecast future values of the series:
 
-```{r}
+```{r,arima}
 arima <- arima(hospitalizations, order = c(2, 1, 5))
 forecast_ori <- forecast(arima, h = 30, level = c(80, 95))
 hospitalizations <- ts(hospitalizations)
@@ -126,7 +126,7 @@ nnetforecast <- forecast(fit, h = 300)
 
 To showcase our neural network's prowess, we plot its predictions alongside the actual data. This visual representation helps us confirm the model's effectiveness at capturing trends and making future predictions.
 
-```{r}
+```{r, nn}
 
 df <- d_pre %>% 
   dplyr::select(c(date, hosp)) %>% 

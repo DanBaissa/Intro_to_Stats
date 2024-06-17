@@ -20,7 +20,7 @@ Let’s imagine a "Dan Estimator" and "Steve Estimator" are trying to draw a lin
 
 
 
-```{r}
+```{r, steve}
 # Simulate some data
 set.seed(42)
 x <- 1:100
@@ -42,7 +42,7 @@ Now, while Dan and Steve's attempts are entertaining, they're obviously not idea
 We want to fit a line through the middle one where we minimize the distance from the line to the points on average. In otherwords we aim to minimize the sum of the squared distances (squared errors) from the data points to the regression line. This method is called "least squares."
 
 
-```{r}
+```{r, ols}
 set.seed(42)
 x <- 1:100
 y <- 2*x + rnorm(100, mean=0, sd=20)
