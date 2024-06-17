@@ -23,6 +23,10 @@ github-repo: "rstudio/bookdown-demo"
 
 # Introduction
 
+```{r echo=FALSE, banner}
+knitr::include_graphics("images/statistics_image.png")
+```
+
 ## Welcome to Our Statistical Journey!
 
 Hello and welcome! If you've ever felt baffled by statistics or wondered how data scientists turn raw numbers into insights, you're in the right place. This book isn't just about learning statistical methods, it's about discovering a new language of data that speaks volumes about the world around us. 
